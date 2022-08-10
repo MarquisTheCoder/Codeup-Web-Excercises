@@ -71,7 +71,10 @@
 
     redButton.onlick = function(){
         let paragraphTags = document.getElementsByTagName("p");
-        paragraphTags.setAttribute("class", "red-button");
+        paragraphTags.forEach( function(){
+
+        })
+
     }
     toggleButton.onclick = function(){
         let classAttribute= paragraph.getAttribute("class");

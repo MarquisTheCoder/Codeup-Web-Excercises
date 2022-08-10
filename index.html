@@ -16,6 +16,9 @@
             margin-left: 10px;
         }
 
+        .red-border{
+            border-color: red;
+        }
         .hidden{
             visibility: hidden;
         }
@@ -57,10 +60,19 @@
     toggle paragraph
 </button>
 
+<button id="red-button">
+    red border
+</button>
+
 <script>
+    let redButton = document.getElementById("red-button");
     let toggleButton = document.getElementById("toggle");
     let paragraph = document.getElementById("ideable");
 
+    redButton.onlick = function(){
+        let paragraphTags = document.getElementsByTagName("p");
+        paragraphTags.setAttribute("class", "red-button");
+    }
     toggleButton.onclick = function(){
         let classAttribute= paragraph.getAttribute("class");
         if (classAttribute == "hidden"){

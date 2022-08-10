@@ -3,8 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        p{
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 10px;
+
+        }
+        button{
+            margin-left: 10px;
+        }
+
+        .hidden{
+            visibility: hidden;
+        }
+
+
+    </style>
 </head>
 <body>
 
+
+<!-- lorem tab to display practice text -->
+<p id="ideable">
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur dolorem, enim esse fugit molestias mollitia
+    nemo neque nobis omnis pariatur praesentium qui quos reiciendis sunt tempora vel velit voluptatum.
+
+</p>
+<p>
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam in laudantium natus praesentium quos saepe velit voluptas
+    voluptate? Cupiditate deleniti deserunt eligendi enim pariatur, praesentium quam quis sed totam voluptates?
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium atque commodi dolores earum eos impedit
+    in inventore magnam minima nesciunt nihil odit quasi quisquam repudiandae sed sit, temporibus.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur hic, incidunt libero natus nobis officia officiis perspiciatis praesentium.
+    Consequuntur cupiditate delectus dolorem doloremque eligendi maxime nulla obcaecati quas suscipit voluptates?
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus facere facilis quibusdam ratione repellendus veniam veritatis. Adipisci aliquam
+    debitis dolorum harum incidunt, maxime minima nisi, odio sunt ut voluptate voluptatibus.
+
+</p>
+
+<p>
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cum esse ipsa repellat totam? Animi consequuntur incidunt
+    necessitatibus nulla! Aliquam delectus distinctio illo maxime nam quidem tempora tenetur ullam velit?
+
+</p>
+
+<button id="toggle">
+    toggle paragraph
+</button>
+
+<script>
+    let toggleButton = document.getElementById("toggle");
+    let paragraph = document.getElementById("ideable");
+
+    toggleButton.onclick = function(){
+        let classAttribute= paragraph.getAttribute("class");
+        if (classAttribute == "hidden"){
+            paragraph.removeAttribute("class");
+        }else{
+            paragraph.setAttribute("class", "hidden");
+        }
+    }
+
+
+</script>
 </body>
 </html>

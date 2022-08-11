@@ -142,9 +142,21 @@
         const CELSIUS = true;
         function celsiusFahrenheitConversion(temperture, boolean){
             if(boolean = CELSIUS){
-                return((temperture * 1.8) + 32);
+
+
+                let conversion = (temperture * 1.8) + 32;
+                 console.log(`Celsius: ${temperture}\n
+                              Converted to...\n
+                              Fahrenheit: ${conversion}`);
+                return(conversion);
+
             }else{
-                return((temperture - 32) * 0.5556);
+
+                let conversion = (temperture - 32) * 0.5556;
+                 console.log(`Fahrenheit: ${temperture}\n
+                              Converted to...\n
+                              Celsius: ${conversion}`);
+                return(conversion);
             }
         }
 

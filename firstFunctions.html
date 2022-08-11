@@ -173,46 +173,44 @@
         stringMethodExample.concat("this to a string");
 
         function returnUppercase(string){
+            console.log(string.toUpperCase());
             return(string.toUpperCase());
         }
         function returnLowerCase(string){
+            console.log(string.toLowerCase());
             return(string.toLowerCase());
         }
 
         function returnEmptyBlanks(string){
-            return(string.replaceAll(" "));
+            console.log(string.replaceAll(" ", ""))
+            return(string.replaceAll(" ", ""));
         }
 
         function returnStringLength(string){
+            console.log(string.length);
             return(string.length);
         }
 
         function returnIndex(string, character){
+            console.log(string.indexOf(character));
             return(string.indexOf(character));
         }
 
         function returnReplacedString(sourceString, indexedString, replacementString){
+            console.log(sourceString.replace(indexedString, replacementString);
             return(sourceString.replace(indexedString, replacementString));
         }
 
         function replaceStringAll(sourceString, indexedString, replacementString){
+            console.log(sourceString.replaceAll(indexedString, replacementString));
             return(sourceString.replaceAll(indexedString, replacementString));
         }
 
         function returnIndex(sourceString, indexStart, indexEnd){
+            console.log(sourceString.substring(indexStart, indexStart));
             return(sourceString.substring(indexStart, indexStart));
         }
 
-
-
-
-
-
-
-
-
-
-
-    </script>
-</body>
+        </script>
+    </body>
 </html>

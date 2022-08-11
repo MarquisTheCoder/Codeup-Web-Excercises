@@ -12,7 +12,7 @@
         let testingVariable = "my variable";
         let myName = "Deshawn Marquis Williams";
         let myWorkplace = "Codeup LLC";
-        let variabes = "int float char bool string undefined"
+        let variables = "int float char bool string undefined"
         let myAge = 22;
 
         //calculating the circumference
@@ -77,11 +77,23 @@
             console.log("my bad bro...");
         }
 
-        function divisibleByFiveAndThree(number){
-            if(number % 5 === 0 && number % 3 === 0){
+        function divisibleByAnd(number, firstNumber, secondNumber){
+            return(number % firstNumber === 0 && number % secondNumber === 0);
+        }
+        function divisibleBySevenAndThree(number){
+            if(divisibleByAnd(number, 7, 3)){
                 return(true);
             }else{return(false)}
         }
+
+        function divisibleByFiveAndTen(number){
+            if(divisibleByAnd(number, 5, 10)){
+                return(true);
+            }else{
+                return(false);
+            }
+        }
+
 
 
 

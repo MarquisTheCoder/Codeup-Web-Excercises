@@ -123,6 +123,31 @@
             return(string + stringIncrementation);
         }
 
+        //This is called a template literal
+
+        alert( `Your name is ${myName}` );
+
+        function returnName(firstName, lastName){
+            return(`Your first name is ${firstName} \n Your last name is ${lastName}`);
+        }
+
+        function returnAddress(houseNumber, streetName, city, state, zipcode){
+            return(`House Number: ${houseNumber} \n
+                    Street name: ${streetName} \n
+                    City; ${city}\n
+                    State: ${state}\n
+                    Zipcode: ${zipcode}`);
+        }
+
+        const CELSIUS = true;
+        function celsiusFahrenheitConversion(temperture, boolean){
+            if(boolean = CELSIUS){
+                return((temperture * 1.8) + 32);
+            }else{
+                return((temperture - 32) * 0.5556);
+            }
+        }
+
 
 
 

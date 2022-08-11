@@ -172,8 +172,36 @@
 
         stringMethodExample.concat("this to a string");
 
+        function returnUppercase(string){
+            return(string.toUpperCase());
+        }
+        function returnLowerCase(string){
+            return(string.toLowerCase());
+        }
 
+        function returnEmptyBlanks(string){
+            return(string.replaceAll(" "));
+        }
 
+        function returnStringLength(string){
+            return(string.length);
+        }
+
+        function returnIndex(string, character){
+            return(string.indexOf(character));
+        }
+
+        function returnReplacedString(sourceString, indexedString, replacementString){
+            return(sourceString.replace(indexedString, replacementString));
+        }
+
+        function replaceStringAll(sourceString, indexedString, replacementString){
+            return(sourceString.replaceAll(indexedString, replacementString));
+        }
+
+        function returnIndex(sourceString, indexStart, indexEnd){
+            return(sourceString.substring(indexStart, indexStart));
+        }
 
 
 

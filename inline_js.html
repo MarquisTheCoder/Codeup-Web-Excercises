@@ -24,10 +24,62 @@
     // }
     //
 
+
+    // declaring variable without variable identifier will automatically be global
+    // example:
+
+    randomVariable = "this is automatically a global variable";
+
     let number = 10;
     function localOrGlobal(){
+        //local scope takes precedence
         let number = 20;
         console.log(number);
+    }
+    console.log(number);
+
+    //function declaration is the normal way of defining functions
+
+    //function expression is another way hers and
+    //example:
+
+    //function expression
+    let bank = function (){
+        console.log("Navy Fed");
+    }
+
+    //function expressiom
+    const barf = function(){
+        console.log("Woof");
+    }
+
+    //arrow functions
+    //latest and greatest functions
+    const meow = () => {
+        console.log("meow");
+    }
+
+    const multiplyByTwo = (x) => {
+        return(x * 2);
+    }
+
+    const addTwoNumber = (fNumber, sNumber) => {
+        return(fNumber, sNumber);
+    }
+
+    function obfus_cat_eeedee_SJSSJSKKSKSKKSKSKSKSKKSKSSD_
+    (paracsdds3232322323, i23234423423424234234){
+        skittle_______ =  false; mnm______________ =
+            true; randoooooom232323232 =  number((skittle_______ || mnm______________) ?
+                    0x00000000000000000001 : 0x000000000000000);
+            return(
+                    randoooooom232323232 +
+                    randoooooom232323232 +
+                    randoooooom232323232 +
+                    randoooooom232323232 +
+                    paracsdds3232322323 +
+                    i23234423423424234234
+            )
     }
 </script>
 </body>

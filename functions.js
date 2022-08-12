@@ -76,13 +76,13 @@ const calculateTip = function(percentage, bill){
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-
+let bill = prompt("What's your bill?: ");
 let preferredPercentage = prompt(
-    "Your bill has come out to 1,027.99\n" +
-             "What would you like to tip?: ");
+    `Your bill has come out to ${bill}\n` +
+             `What would you like to tip?: `);
 
-alert( `The amount you are tipping is: ${calculateTip(preferredPercentage, 1027.99)}\n 
-       So your total amount will come out to: ${calculateTip(preferredPercentage, 1027.99) + 1027.99}`);
+alert( `The amount you are tipping is: ${calculateTip(preferredPercentage, bill)}\n 
+       So your total amount will come out to: ${calculateTip(preferredPercentage, bill) + bill}`);
 
 /**
  * TODO:

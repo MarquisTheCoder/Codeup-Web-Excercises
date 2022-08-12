@@ -1,2 +1,4 @@
 alert("This is my alert");
-confirm("Are you sure you don't want this? ");
+if(confirm("do you want this?")){
+    alert("this is my folder");
+}

@@ -9,9 +9,8 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-const sayHello = name => {
-    return(`Hello, ${name}`);
-}
+const sayHello = name => `Hello, ${name}`;
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -19,7 +18,8 @@ const sayHello = name => {
  *
  * console.log 'helloMessage' to check your work
  */
-console.log(sayHello("Deshawn Marquis williams"));
+let helloMessage = sayHello("Deshawn Marquis Williams");
+console.log(helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -65,18 +65,23 @@ isTwo(random);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+
 const calculateTip = function(percentage, bill){
     return(percentage * bill);
 }
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-let preferredPercentage = prompt("Your bill has come out to 1,027.99\n" +
-    "What would you like to tip?: ");
-alert(`The amount you are tipping is: ${calculateTip(preferredPercentage, 1027.99)}\n 
+
+let preferredPercentage = prompt(
+    "Your bill has come out to 1,027.99\n" +
+             "What would you like to tip?: ");
+
+alert( `The amount you are tipping is: ${calculateTip(preferredPercentage, 1027.99)}\n 
        So your total amount will come out to: ${calculateTip(preferredPercentage, 1027.99) + 1027.99}`);
 
 /**

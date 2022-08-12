@@ -4,10 +4,31 @@
     <title>Inline JS</title>
 </head>
 <body>
+<style>
+    html{
+        background-color: black;
+        color: white;
+
+    }
+</style>
 <script>
     "use strict";
     // JavaScript code goes here
     console.log("Hello from inline JavaScript");
+    let userInput = prompt("Enter your name: ");
+    document.write(`<h1 style="color: green">${userInput}, <span>It's nice to meet you</span> </h1>`);
+    //
+    // let number = 20;
+    // function localOrGlobal(){
+    //     console.log(number);
+    // }
+    //
+
+    let number = 10;
+    function localOrGlobal(){
+        let number = 20;
+        console.log(number);
+    }
 </script>
 </body>
 </html>

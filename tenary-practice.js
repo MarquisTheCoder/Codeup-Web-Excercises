@@ -12,7 +12,7 @@ let antType = "bug";
 
 const BRAIN_DEVELOPED = 25;
 
-function t(tenaryOperation){
+function t(ternaryOperation){
     console.log(tenaryOperation);
 }
 
@@ -27,3 +27,15 @@ t((failed !== success) ? "hmm....that sounds about right" : "bruh........huh?");
 t((antType === "bug") ? "The ants type is correct" : "the ants type needs to be bug");
 t((flowerType === "plant") ? "The flowers type is indeed plant" : "The flowers type needs to be plant");
 
+//keyword/function-name/parameters
+//parenthesis have zero or more parameters
+
+function functionExample(parameters){
+    //function body which contains code
+    //that function runs when code is
+    //invoked.
+}
+
+function sayHello(greeting, name){
+    console.log(`${greeting} ${name}`);
+}

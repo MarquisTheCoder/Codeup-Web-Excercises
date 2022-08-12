@@ -7,6 +7,12 @@
 
 <body>
 
+    <style>
+        html{
+            background-color: black;
+        }
+    </style>
+
     <script>
 
         let testingVariable = "my variable";
@@ -182,8 +188,8 @@
         }
 
         function returnEmptyBlanks(string){
-            console.log(string.replaceAll(" ", ""))
-            return(string.replaceAll(" ", ""));
+            console.log(string.trim());
+            return(string.trim());
         }
 
         function returnStringLength(string){
@@ -200,7 +206,6 @@
             console.log(sourceString.replace(indexedString, replacementString);
             return(sourceString.replace(indexedString, replacementString));
         }
-
         function replaceStringAll(sourceString, indexedString, replacementString){
             console.log(sourceString.replaceAll(indexedString, replacementString));
             return(sourceString.replaceAll(indexedString, replacementString));
@@ -210,6 +215,13 @@
             console.log(sourceString.substring(indexStart, indexStart));
             return(sourceString.substring(indexStart, indexStart));
         }
+
+        //equality and strict equality
+        //== and ===
+
+
+
+
 
         </script>
     </body>

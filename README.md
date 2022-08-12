@@ -1,2 +1,2 @@
 # Codeup-Web-Excercises
-Class excecise at code up class
+Class excercise at code up class

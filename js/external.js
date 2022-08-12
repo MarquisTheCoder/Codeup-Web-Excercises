@@ -81,7 +81,8 @@ function productBuyer(){
             alert("WE CANNOT HELP YOU!!");
             return("WE CANNOT HELP YOU GO AWAY RIGHT NOW!!!");
         }else{
-            alert("We'll try to maybe ship your items immediately.....maybe");
+            alert("We'll try to maybe ship your items immediately.....maybe..like" +
+                "if we feel like it. But only if we feel like it.....on a good day.");
         }
     }
 

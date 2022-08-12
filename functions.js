@@ -93,6 +93,8 @@ alert(`The amount you are tipping is: ${calculateTip(preferredPercentage, 1027.9
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+//practicing ternary operator
 function applyDiscount(price, discountPercentage){
     return((discountPercentage > 0 && discountPercentage <= 1) ? price - (price * discountPercentage) :
         "Not a valid percentage");

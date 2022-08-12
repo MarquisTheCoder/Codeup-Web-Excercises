@@ -8,7 +8,7 @@ if(userResponse){
 
 //=============EXCERCISE THREE FROM PREVIOUS EXERCISE===============
 
-//.A)
+//.A)------------------------------------------
 function moviePriceCalculation(amountOfDays){
     return(amountOfDays * 3);
 }
@@ -26,7 +26,7 @@ outputPay(littleMermaid + brotherBear + hercules);
 
 console.log(outputPay)
 
-//.B)
+//.B)------------------------------------------
 function payPerHour(hourlyRate, hoursWorked){
     return(hourlyRate * hoursWorked);
 }
@@ -40,7 +40,7 @@ console.log(outputPay(
     )
 );
 
-//.C)
+//.C)------------------------------------------------------------
 function classCapacityChecker(classCapacity, numberOfStudents){
     return(classCapacity>numberOfStudents);
 }
@@ -48,15 +48,15 @@ function classSchedule(){
     let classCapacity = prompt("How any students can the class hold?: ");
     let numberOfStudents = prompt("How many students are in the class?: ")
     if(classCapacityChecker(classCapacity, numberOfStudents)){
-        alert("You can attend this class!");
-        return("You can attend this class!");
+        alert("You can enroll in this class!");
+        return("You can enroll this class!");
     }
-    alert("You cannot attend this class!");
-    return("You cannot attend this class!");
+    alert("You cannot enroll this class!");
+    return("You cannot enroll this class!");
 
 }
 
-//.D)
+//.D)-----------------------------------------------------------------------------
 
 function productBuyer(){
     let memberStatus = prompt("Are you a premium member? ");

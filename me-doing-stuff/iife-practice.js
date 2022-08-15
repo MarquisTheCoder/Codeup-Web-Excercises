@@ -15,6 +15,7 @@
 * to protect the global scope and
 * keep code clean and reliable.
 * */
+
 ( function(){
     /*
      All code beyond this point is within the IIFEs local scope
@@ -22,6 +23,18 @@
     function testDeclarationExample(parameter1, parameter2){
         return((parameter1 > parameter2) ? parameter1 / parameter2 : parameter2 / parameter1);
     }
+
+
+    /*
+     Functions walk-through with Javier
+    * */
+
+    /*Function expression */
+
+    /*Functions should be portable thats why we don't
+     rely on variables in the global scope*/
+    const addNine = function (x){ return(x + 9)}
+    const addTen = (x) => x + 10;
 
 
 })();

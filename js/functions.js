@@ -53,7 +53,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 const isTwo = number => (number === 2) ? true : false;
-isTwo(random);
+console.log(isTwo(random));
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -66,9 +66,8 @@ isTwo(random);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-const calculateTip = function(percentage, bill){
-    return(percentage * bill);
-}
+const calculateTip = (percentage, bill) => (percentage * bill);
+
 
 /**
  * TODO:
@@ -76,13 +75,13 @@ const calculateTip = function(percentage, bill){
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-let bill = prompt("What's your bill?: ");
-let preferredPercentage = prompt(
-    `Your bill has come out to ${bill}\n` +
-             `What would you like to tip?: `);
+let bill = Number(prompt("What's your bill?: "));
+let preferredPercentage = Number(prompt(
+    `Your bill has come out to $${bill}\n` +
+             `What percentage would you like to tip?: `));
 
-alert( `The amount you are tipping is: ${calculateTip(preferredPercentage, bill)}\n 
-       So your total amount will come out to: ${calculateTip(preferredPercentage, bill) + bill}`);
+alert( `The amount you are tipping is: $${0.1 * calculateTip(preferredPercentage/100, bill)}\n 
+       So your total amount will come out to: $${calculateTip(preferredPercentage, bill) + bill}`);
 
 /**
  * TODO:

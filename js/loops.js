@@ -37,6 +37,7 @@ Loop exercises for CodeUp curriculum
             for(let iter = 0; iter != parseFloat(pyramidBrick); iter++){
                 console.log(`${pyramidBrick}`);
             }
+
         }
     }
     numberPyramid();

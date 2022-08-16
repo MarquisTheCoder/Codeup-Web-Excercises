@@ -32,11 +32,12 @@ Loop exercises for CodeUp curriculum
     generateRandom(10);
 
     function numberPyramid(){
-        for(let pyramidBrick in Array.from(Array(10).keys())){
-
+        for(let pyramidBrick in Array.from({length: 10}, (_, i) => i + 1)){
+            let string = ``;
             for(let iter = 0; iter != parseFloat(pyramidBrick); iter++){
-                console.log(`${pyramidBrick}`);
+                string += `${pyramidBrick}`;
             }
+            console.log(string);
 
         }
     }

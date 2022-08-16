@@ -30,4 +30,11 @@ Loop exercises for CodeUp curriculum
     }
 
     generateRandom(10);
+
+    function numberPyramid(startingPoint,endingPoint){
+        for(let pyramidBrick in Array.from(Array(10).keys())){
+
+        }
+    }
+
 })();

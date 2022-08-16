@@ -18,4 +18,16 @@ Loop exercises for CodeUp curriculum
             console.log(`${number} x ${item} = ${number * item}`);
         }
     }
+
+
+    function generateRandom(iterations){
+        const isEven = number => number % 2 == 0;
+        for(let i = 0; i !== iterations; i++){
+            let randomNumber = Math.floor(Math.random() * 200) + 20;
+            (isEven(randomNumber)) ? console.log(`${randomNumber} is even`) :
+                                     console.log(`${randomNumber} is odd`);
+        }
+    }
+
+    generateRandom(10);
 })();

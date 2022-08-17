@@ -29,15 +29,15 @@ Loop exercises for CodeUp curriculum
         }
     }
 
-    generateRandom(10);
+   // generateRandom(10);
 
     function numberPyramid(){
         for(let pyramidBrick in Array.from({length: 10}, (_, i) => i + 1)){
-            let string = ``;
-            for(let iter = 0; iter != +pyramidBrick; iter++){
+            let string = `${pyramidBrick}`
+            for(let iter = 0; iter < pyramidBrick-1; iter++){
                 string += `${pyramidBrick}`;
             }
-            console.log(string);
+            (string != 0) ? console.log(string): 1;
         }
     }
     numberPyramid();

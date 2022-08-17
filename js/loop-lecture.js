@@ -53,7 +53,6 @@ Javier giving lecture on loops.
     // }
 
     //METHOD THREE
-
     // let total = 0;
     // let priceOfitem;
     // while(true){
@@ -63,9 +62,8 @@ Javier giving lecture on loops.
     //         alert('Your final total is: ' + total);
     //         break;
     //     }else{
-    //         priceOfitem = parseFloat(cost);
-    //         total = total + priceOfitem;
-    //         alert(`Your total is: ${total}`);
+    //         total = total + parseFloat(cost);
+    //         alert(`Your total is: ${total.toFixed()}`);
     //     }
     // }
 

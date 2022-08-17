@@ -32,6 +32,7 @@ Javier giving lecture on loops.
     // const p = n => parseFloat(n);
     //
 
+/*============================================================================================================*/
     // METHOD ONE
     // let budget = p(prompt('what is your budget?: '));
     // for(let totalCost = 0; totalCost <= budget; totalCost += p(prompt('How much does the item cost?: '))){
@@ -67,4 +68,6 @@ Javier giving lecture on loops.
     //         alert(`Your total is: ${total}`);
     //     }
     // }
+
+
 })();

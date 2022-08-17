@@ -50,4 +50,9 @@ File Description:
    for(let count = 100; count >= 0; count--){
        console.log(count);
    }
+
+   let i = 0;
+   while(i < 20){
+       console.log(i++);
+   }
 })();

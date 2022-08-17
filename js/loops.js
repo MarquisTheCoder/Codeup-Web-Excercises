@@ -34,11 +34,10 @@ Loop exercises for CodeUp curriculum
     function numberPyramid(){
         for(let pyramidBrick in Array.from({length: 10}, (_, i) => i + 1)){
             let string = ``;
-            for(let iter = 0; iter != parseFloat(pyramidBrick); iter++){
+            for(let iter = 0; iter != +pyramidBrick; iter++){
                 string += `${pyramidBrick}`;
             }
             console.log(string);
-
         }
     }
     numberPyramid();

@@ -47,5 +47,7 @@ File Description:
         footsteps++;
     }while(footsteps != END_OF_PATH);
 
-
+   for(let count = 100; count >= 0; count--){
+       console.log(count);
+   }
 })();

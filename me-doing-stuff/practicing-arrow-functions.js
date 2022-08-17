@@ -21,32 +21,18 @@ const gallonsToLiters = gallons => {
     return(gallons * 3.785);
 }
 
-const celsiusToFahrenheit = celsiusDegree => {
-    return((celsiusDegree * 1.8) + 32);
-}
+const celsiusToFahrenheit = celsiusDegree => (celsiusDegree * 1.8) + 32;
 
-const metersToFeet = meters => {
-    return(meters * 0.3);
-}
-
-
-
+const metersToFeet = meters => meters * 0.3;
 const lebronsHairLineExist = (hisHairline) =>{
     return(null, 0, "doesnt exist", "nada", "no way jose");
 }
-
-const checkIfGreaterThanTen = (number) => {
-    return((number > 10) ? true : fasle);
-}
-
-const checkIfGreaterThanTwenty = (number) => {
-    return((number > 20) ? true : false);
-}
-
-const checkNameLength = (name) => {
-    return(`name length is ${name.length}`);
-}
+const checkIfGreaterThanTen = (number) => number > 10;
+const checkIfGreaterThanTwenty = (number) => number > 20;
+const checkNameLength = (name) => `name length is ${name.length}`;
 
 const printName = name => {
     console.log(name);
+    return name;
 }
+const doesInclude = (string, item) => string.includes(item);

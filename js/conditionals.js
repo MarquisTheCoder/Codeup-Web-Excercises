@@ -120,7 +120,7 @@ alert(analyzeColor(prompt('pick a color: ')));
  */
 
 function calculateTotal(luckyNumber, amount){
-    switch (Number(luckyNumber)){
+    switch (parseFloat(luckyNumber)){
         case 0:
             return amount;
             break;
@@ -183,5 +183,5 @@ const allOfTheAbove = number => isEven(number) + plusOneHundred(number) + polari
 /*below this line will ask for user input and alert all of the following functions*/
 if(confirm('Would you like to enter a number')){
     let number = parseFloat(prompt('Enter Number: '));
-    (!isNaN(Number(number))) ? alert(allOfTheAbove(number)) : alert('That\'s not a number nerd');
+    (!isNaN(parseFloat(number))) ? alert(allOfTheAbove(number)) : alert('That\'s not a number nerd');
 }

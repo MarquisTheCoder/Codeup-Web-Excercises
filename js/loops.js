@@ -42,4 +42,9 @@ Loop exercises for CodeUp curriculum
         }
     }
     numberPyramid();
+
+
+    for(let i = 100; i !== 0; i-=5){
+        console.log(i);
+    }
 })();

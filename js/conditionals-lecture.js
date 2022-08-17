@@ -31,7 +31,7 @@
 let running = true;
 while(running){
     const divByFive = (number) =>
-        (number % 5 === 0 && isNaN(Number(number))) ? alert('number is divisible by five') : alert('pick another number');
+        (number % 5 === 0 && isNaN(parseFloat(number))) ? alert('number is divisible by five') : alert('pick another number');
     divByFive(prompt('Check if number is divisible by 5: '));
 
 }

@@ -13,16 +13,15 @@ Loop exercise for CodeUp LLC class.
 
 (function () {
     const checkRange = num => num >= 1 && num <= 50;
-    const oddArray = Array.from({length: 50}, (_, i) => i + 1).filter(num => num %2);
 
     while(true){
         let userInput = parseFloat(prompt('Enter A number: '));
-        if(oddArray.includes(userInput) && checkRange(userInput)){
-            for(let oddNumber in oddArray){
-                if(oddNumber == userInput){
+        if(checkRange(userInput) && userInput % 2 !== 0){
+            for(let number in Array.from(Array(50).keys())){
+                if(number == userInput){
                     console.log(`Yikes!Skipping number: ${userInput}`);
                 }else{
-                    console.log(`Here's an Odd number: ${oddNumber}`);
+                    (number % 2 !== 0) ? console.log(`Here's an Odd number: ${number}`): 0;
                 }
             }
             break;

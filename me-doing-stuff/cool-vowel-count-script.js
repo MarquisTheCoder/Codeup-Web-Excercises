@@ -12,5 +12,5 @@
 
 (function () {
         let vowelCount = str => (str.match(/[aeiou]/ig)||[]).length;
-        let vowelCount = str => str.match(/[aeiou]/ig)||[].length;
+        let vowelCount2 = str => str.match(/[aeiou]/ig)||[].length;
 })();

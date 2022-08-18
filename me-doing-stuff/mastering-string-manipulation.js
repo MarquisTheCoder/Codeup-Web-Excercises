@@ -25,5 +25,5 @@ File Description:
 
     let namesOfFamous = ['Angelina Jolie', 'Jordan Peterson', 'Jay Z', 'Scarlett Johanson', 'Andrew Tate'];
     console.log(namesOfFamous.join(' '));
-    namesOfFamous
+
 })();

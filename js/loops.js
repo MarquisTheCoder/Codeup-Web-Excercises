@@ -32,7 +32,7 @@ Loop exercises for CodeUp curriculum
    // generateRandom(10);
 
     // function numberPyramid(){
-    //     for(let pyramidBrick in Array.from({length: 10}, (_, i) => i + 1)){
+    //     for(let pyramidBrick in Array.from({length: 10}, (index, element) => element + 1)){
     //         let string = `${pyramidBrick}`
     //         for(let iter = 0; iter < pyramidBrick-1; iter++){
     //             string += `${pyramidBrick}`;

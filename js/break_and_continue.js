@@ -11,17 +11,19 @@ Loop exercise for CodeUp LLC class.
 */
 
 
-(function () {
+(
+    function () {
     const checkRange = num => num >= 1 && num <= 50;
 
     while(true){
-        let userInput = parseFloat(prompt('Enter A number: '));
-        if(checkRange(userInput) && userInput % 2 !== 0){
-            for(let number in Array.from(Array(50).keys())){
-                if(number == userInput){
-                    console.log(`Yikes!Skipping number: ${userInput}`);
+        let numberChoice = parseFloat(prompt('Enter A number: '));
+        if(checkRange(numberChoice) && numberChoice % 2 !== 0){
+            for(let element in Array.from((Array(50).keys()))){
+                if(element == numberChoice){
+                    console.log(`Yikes!Skipping number: ${numberChoice}`);
                 }else{
-                    (number % 2 !== 0) ? console.log(`Here's an Odd number: ${number}`): 0;
+                    (element % 2 !== 0) ? console.log(`Here's an Odd number: ${element}`):
+                                                      'skipping even number here';
                 }
             }
             break;

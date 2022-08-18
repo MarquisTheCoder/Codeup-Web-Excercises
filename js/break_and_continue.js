@@ -9,22 +9,17 @@ File Name: break_and_continue.js,
 File Description:
 Loop exercise for CodeUp LLC class.
 */
-
-
 (
     function () {
     const checkRange = num => num >= 1 && num <= 50;
 
     while(true){
-        let numberChoice = parseFloat(prompt('Enter A number: '));
-        if(checkRange(numberChoice) && numberChoice % 2 !== 0){
-            for(let element in Array.from((Array(50).keys()))){
-                if(element == numberChoice){
-                    console.log(`Yikes!Skipping number: ${numberChoice}`);
-                }else{
-                    (element % 2 !== 0) ? console.log(`Here's an Odd number: ${element}`):
-                                                      'skipping even number here';
-                }
+        let number = prompt('Enter A number: ');
+        if(checkRange(number) && number % 2 !== 0){
+            for(let odd = 1; odd < 50; odd += 2){
+                odd == number ?
+                    console.log(`Yikes!Skipping number: ${number}`) :
+                    console.log(`Here's an Odd number: ${odd}`);
             }
             break;
         }

@@ -31,19 +31,45 @@ Loop exercises for CodeUp curriculum
 
    // generateRandom(10);
 
+    // function numberPyramid(){
+    //     for(let pyramidBrick in Array.from({length: 10}, (_, i) => i + 1)){
+    //         let string = `${pyramidBrick}`
+    //         for(let iter = 0; iter < pyramidBrick-1; iter++){
+    //             string += `${pyramidBrick}`;
+    //         }
+    //         (string != 0) ? console.log(string): 1;
+    //     }
+    // }
+
     function numberPyramid(){
-        for(let pyramidBrick in Array.from({length: 10}, (_, i) => i + 1)){
-            let string = `${pyramidBrick}`
-            for(let iter = 0; iter < pyramidBrick-1; iter++){
-                string += `${pyramidBrick}`;
-            }
-            (string != 0) ? console.log(string): 1;
+        for(let i = 1; i < 10; i++){
+            console.log(i.toString().repeat(i));
         }
     }
     numberPyramid();
 
 
+    let number = 9;
+    let count = 0;
+
+    let outputString = '';
+
+    while(count < number){
+        outputString.concat(count++);
+    }
+
+    console.log(outputString);
+
     for(let i = 100; i !== 0; i-=5){
         console.log(i);
     }
+
+    const recursiveMultiply = (number, iterations) => {
+        for(let multiplier = 1; multiplier < iterations; multiplier++){
+            console.log(`${number} X ${iterations} = ${number * iterations}`);
+        }
+    }
+
+    const TESTING_PARAMETER =  [4,6];
+    recursiveMultiply(...TESTING_PARAMETER);
 })();

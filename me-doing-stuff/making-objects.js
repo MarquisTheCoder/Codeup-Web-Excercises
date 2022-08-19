@@ -34,9 +34,11 @@
                            }
 
                 }
+                this.userId = Math.floor(Math.random() * (10000000 - 1000 + 1) + 1000);
 
         }
         let Marquis = new person('Marquis', 'Williams', '02172000', 'Negro');
         Marquis.job.putOccupation('Developer');
         console.log(Marquis.job.occupation);
+        console.log(Marquis.userId);
 })();

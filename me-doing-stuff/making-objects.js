@@ -48,8 +48,10 @@
 
         }
 
-        let Marquis = new person('Marquis', 'Williams', '02172000', 'Negro');
+        let Marquis = new person('Marquis', 'Williams', '02172000', 'BLK');
         Marquis.job.putOccupation('Developer');
+        Marquis.job.putSalary('100000');
+
         console.log(Marquis.job.occupation);
         console.log(Marquis.userId);
 

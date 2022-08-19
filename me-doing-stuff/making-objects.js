@@ -53,17 +53,84 @@
         Marquis.job.putOccupation('Developer');
         Marquis.job.putSalary('100000');
 
-        let userName = prompt('Username: ');
-        let password = prompt('Password');
-        if(Marquis.privateData.checkCredentials( userName, password)){
-                alert(Marquis.privateData.checkCredentials(userName,password));
-        }else{
+
+        for(let userName = prompt('username');!Marquis.privateData.checkCredentials( userName, password)){
+
                 alert('Username/Password Combo not accepted');
         }
 
-        let house ={
-                address : {
+        alert(Marquis.privateData.checkCredentials(userName,password));
 
+
+
+        function Animal(species, name, habitat ){
+
+                let health = 50.0;
+                let stamina = 75.0;
+                let morale = 100.0;
+
+
+                Animal.needsSustenance = true;
+                Animal.needsOxygen = true;
+                Animal.isImmortal = false;
+                Animal.needsWater = true;
+
+                this.isAlive = true;
+                this.habitat = habitat;
+                this.species = species;
+                this.name = name;
+
+
+                let foodTypes = {
+                        protein: 20,
+                        vegetables: 5,
+                        poison: -10,
+                        carbs: 25
+                }
+
+                this.actions = {
+                        checkHealth : function(){
+                                if(health > 0){
+                                        console.log('tiger is dead');
+                                        console.log(            '(\'--..--`)\n' +
+                                                            '     .-- )( --.\n' +
+                                                            '\n' +
+                                                            '     .-/    \\-.\n' +
+                                                            '    ( (  \\/  ) )\n' +
+                                                            '     \' \'----\' \'\n' +
+                                                            '        \'__\'');
+                                        return 0;
+                                }else{
+                                        return 1
+                                }
+                        },
+                        eatFood : function (foodType){
+                          if(foodTypes[foodType]){
+
+                                  console.log(`Eating ${foodType}`);
+                                  console.log(`Health before eating: ${health}`);
+                                  health += foodTypes[foodType];
+                                  console.log(`health after eating: ${health}`);
+                                  this.checkHealth();
+                          }else{
+                                  console.log('tiger not fed');
+                                  this.checkHealth();
+                          }
+                        }
                 }
         }
+
+        function kill(animal){
+                console.log(`Killing: ${animal.species} ${animal.name}`);
+                while(animal.actions.checkHealth()){
+                        animal.actions.eatFood('poison');
+                }
+        }
+        let tiger = new Animal('tiger','carl','jungle');
+        // console.log(tiger.species);
+        // tiger.actions.eatFood('protein');
+        // tiger.actions.eatFood('poison');
+
+        kill(tiger);
+
 })();

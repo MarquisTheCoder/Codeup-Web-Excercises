@@ -76,8 +76,16 @@
   //pop removes the last element
   //push adds the the last element
 
-  groceryList.slice(1,3)
+  groceryList.slice(1,3);
   groceryList[groceryList.indexOf('chicken')] = 'more fish';
+
+  groceryList.forEach(function (grocery,index, array){
+          array[index] = array[index].toUpperCase();
+  });
+
+  groceryList.forEach(function (grocery, index, array){
+    array[index] = array[index].toLowerCase();
+  });
 
 
 

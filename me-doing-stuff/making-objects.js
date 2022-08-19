@@ -34,6 +34,15 @@
                            }
 
                 }
+                this.credentials = {
+                        userName: 'username',
+                        password: 'password'
+                }
+                this.privateData = {
+                        checkCredentials : function(){
+                                person.credentials.userName
+                        }
+                }
                 this.userId = Math.floor(Math.random() * (10000000 - 1000 + 1) + 1000);
 
         }

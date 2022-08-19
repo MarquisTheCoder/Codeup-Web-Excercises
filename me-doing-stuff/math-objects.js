@@ -45,4 +45,45 @@
 
 
 
+        //MATH.ROUND()
+        //the Math.round() function returns the value of a number rounded to the nearest integer
+        Math.round(5.5) //6
+        Math.round(5.90) //6
+        Math.round(78.233455354) // 78
+        Math.round(9.9) //10
+        Math.round(7.8) //8
+        Math.round(2.21111) //2
+        Math.round(3.566)//4
+        Math.round(45.234334) // 45
+        Math.round(7.2333) //7
+        Math.round(921.1221243142349234) //921
+        Math.round(921.564566456) //922
+
+        //MATH.FLOOR()
+        //The Math.floor() function returns the largest integer less than or equal to a number.
+        Math.floor(4.55555) //4
+        Math.floor(323.111) //323
+        Math.floor(455.3) // 455
+        Math.floor(88.9) //88
+        Math.floor(78.903434) //78
+        Math.floor(45.222) //90
+        Math.floor(76.899) //76
+        Math.floor(45.999)//45
+        Math.floor(33) //33
+        Math.floor(45.789) //45
+
+        //MATH.CEIL
+        //The Math.ceil() function returns the smallest integer greater than or equal to a number.
+
+        Math.ceil(45.1) //46
+        Math.ceil(36.1) //37
+        Math.ceil(56.23) //57
+        Math.ceil(78.345) //79
+        Math.ceil(19.01) //20
+        Math.ceil(33) //33
+        Math.ceil(3.4)//4
+        Math.ceil(3.2) //4
+        Math.ceil(3.1) //4
+        Math.ceil(8.34) //9
+
 })();

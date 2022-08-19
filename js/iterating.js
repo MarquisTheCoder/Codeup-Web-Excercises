@@ -63,6 +63,6 @@ File Description:
 
     const first = arr => arr[0];
     const second = arr => arr[1];
-    const last= arr => arr[arr.length];
+    const last= arr => arr[arr.length -1];
 
 })();

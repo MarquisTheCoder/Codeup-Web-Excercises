@@ -7,6 +7,7 @@
  Time Created: 2:32 PM,
  File Name: making-objects.js,
  File Description:
+ practicing objects in javascript
  */
 
 
@@ -60,4 +61,9 @@
                 alert('Username/Password Combo not accepted');
         }
 
+        let house ={
+                address : {
+
+                }
+        }
 })();

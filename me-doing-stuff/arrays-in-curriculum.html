@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Arrays in curriculum</title>
 </head>
 <body>
-<script src="mastering-string-manipulation.js">
+<script >
   /*
   * The PUSH and UNSHIFT methods can be used to add items to an array.
   * The primary difference is that push adds an item to the end of an
@@ -49,6 +49,16 @@
   for(let i = 0; i < arrayNotation.length; i++){
           console.log(`I have to buy ${arrayNotation[i]}`);
   }
+
+  ['first string', 'second string', 'third string', 'fourth string'].forEach((element, index) => {
+          console.log(`${index}.) ${element}`);
+  });
+
+  prices = [213,43,545,67,75467];
+  prices.forEach(function(price, index){
+          console.log(price);
+  })
+
 
 
 </script>

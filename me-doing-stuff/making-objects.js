@@ -17,7 +17,7 @@
                 this.lastName = lastName;
                 this.birthday = birthday;
                 this.ethnicity = ethnicity;
-                //trying to intialize variables for
+                //trying to initialize variables for
                 //job object
                 this.job = {
                            putOccupation: function(occupation) {

@@ -152,6 +152,8 @@
      */
 
     const createBook = function(title, firstName, lastName) {
+
+            //this is a chopped up way of creating a constructor
             return {
                     title: title, author: {
                             firstName: firstName,
@@ -160,8 +162,14 @@
                             console.log(this.title);
                             console.log(this.author.firstName);
                             console.log(this.author.lastName);
+                    },thankAuthor : function (){
+                            console.log(`Thank you ${this.author.firstName} ${this.author.lastName}!`);
                     }
             }
     }
+
+    let meditations = createBook('Meditations', 'Marcus', 'Aurelius');
+    meditations.showBookInfo();
+    meditations.thankAuthor();
 
 })();

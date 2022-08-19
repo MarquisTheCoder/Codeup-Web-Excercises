@@ -25,7 +25,7 @@ File Description:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-    conssole.log(names.length);
+    console.log(names.length);
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
@@ -63,6 +63,6 @@ File Description:
 
     const first = arr => arr[0];
     const second = arr => arr[1];
-    const thrird = arr => arr[2];
+    const last= arr => arr[arr.length];
 
 })();

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark" class=" omwqjiowcm idc0_342"><head>
+<html id="main" data-darkreader-mode="dynamic" data-darkreader-scheme="dark" class=" omwqjiowcm idc0_342"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator {
     filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(95%) sepia(50%) !important;
 }</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
@@ -131,29 +131,20 @@ embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style></h
 
 <script>
 (function() {
-    "use strict";
 
     let detonationTimer = 5;
-
     // TODO: This function needs to be called once every second
-    let bombTimer = setInterval(function updateTimer() {
-
-        if (detonationTimer === 0) {
-            alert('EXTERMINATE!');
-            document.body.innerHTML = '';
-        } else if (detonationTimer > 0) {
-            document.getElementById('timer').innerHTML = detonationTimer;
-        }
-
-        detonationTimer--;
+    let updateTimer = setInterval(() => {
+        if (!detonationTimer--){
+            document.getElementById('main').style.backgroundColor = 'red';
+            document.body.innerHTML = '<h1>EXTERMINATE!!!!</h1>';
+        } else document.getElementById('timer').innerHTML = detonationTimer.toString();
     }, 1000);
-
 
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
-    function defuseTheBOM() {
-            clearInterval(bombTimer);
-    }
+    let defuseTheBOM = () => clearInterval(updateTimer);
+
 
     // Don't modify anything below this line!
     //

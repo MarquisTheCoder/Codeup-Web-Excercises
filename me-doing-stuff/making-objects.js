@@ -140,32 +140,64 @@
         //functions
         //you can return functions out of functions
 
-        let wishlist = [10,14,40,57,23];
-        function checkPricesOfWishlist(wishlist){
-                wishlist.forEach( item=> {
-                        if(item > 50)
-                                return true;
-                });
-                return false;
+        // let wishlist = [10,14,40,57,23];
+        // function checkPricesOfWishlist(wishlist){
+        //         wishlist.forEach( item=> {
+        //                 if(item > 50)
+        //                         return true;
+        //         });
+        //         return false;
+        // }
+        //
+        // function totalCost(arr){
+        //         arr.forEach((e_,_i,arr) => (_i !== 0) ? arr[0] += e_ : 0);
+        //         return arr[0];
+        // }
+        //
+        // checkPricesOfWishlist(wishlist);
+        //
+        // let x = [1,2,3,4,5]
+        //
+        // //first class functions take a function uses a function and returns
+        // function doAll(func1, func2){
+        //         console.log(func1(wishlist), func2(x))
+        // }
+        //
+        // doAll(checkPricesOfWishlist, totalCost);
+        //
+        // let tigerId = document.getElementById('tiger');
+
+        //array of objects
+
+        let hourlyWeather = [
+                {
+                        time: "08:00",
+                        temperature: 78.91,
+                        feels_like: 78.91
+                },
+                {
+                        time: "09:00",
+                        temperature: 79.57,
+                        feels_like: 79.57
+                },
+                {
+                        time: "10:00",
+                        temperature: 81.46,
+                        feels_like: 86.04
+                },
+                {
+                        time: "11:00",
+                        temperature: 84.49,
+                        feels_like: 89.24
+                }
+        ];
+
+        const weather = (hourlyStats) =>{
+                console.log(hourlyStats.time);
+                console.log(hourlyStats.feels_like);
+                console.log(hourlyStats.temperature);
         }
 
-        function totalCost(arr){
-                arr.forEach((e_,_i,arr) => (_i !== 0) ? arr[0] += e_ : 0);
-                return arr[0];
-        }
-
-        checkPricesOfWishlist(wishlist);
-
-        let x = [1,2,3,4,5]
-
-        //first class functions take a function uses a function and returns
-        function doAll(func1, func2){
-                console.log(func1(wishlist), func2(x))
-        }
-
-        doAll(checkPricesOfWishlist, totalCost);
-
-        let tigerId = document.getElementById('tiger');
-
+        hourlyWeather.forEach(stat => weather(stat));
 
 })();

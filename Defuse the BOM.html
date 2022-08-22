@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark" class=" omwqjiowcm idc0_342"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator {
+    filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(95%) sepia(50%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: #121211;
+   --darkreader-neutral-text: #fffbda;
+   --darkreader-selection-background: #2b507a;
+   --darkreader-selection-text: #ffffee;
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191816 !important;
+}
+html {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: #191816;
+}
+html, body {
+    border-color: #887b65;
+    color: #ffffee;
+}
+a {
+    color: #78a1cb;
+}
+table {
+    border-color: #69665c;
+}
+::placeholder {
+    color: #dac9ab;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #464417 !important;
+    color: #ffffee !important;
+}
+::selection {
+    background-color: #2b507a !important;
+    color: #ffffee !important;
+}
+::-moz-selection {
+    background-color: #2b507a !important;
+    color: #ffffee !important;
+}</style>
+    <meta charset="utf-8">
+    <title>Defuse the BOM</title>
+<meta name="darkreader" content="6cd03faea61944f19f642e1395351022"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #785c17 !important;
+    border-color: #ebc85a !important;
+    color: #ffffdf !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: #24393a !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: #0d1b1d !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: #050504 !important;
+}
+.tou-uknfeu {
+    background-color: #1d1407 !important;
+}
+.tou-6i3zyv {
+    background-color: #3c595b !important;
+}
+embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style></head>
+<body>
+
+<h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
+<button id="defuser">Defuse the BOM</button>
+
+<script>
+(function() {
+    "use strict";
+
+    let detonationTimer = 5;
+
+    // TODO: This function needs to be called once every second
+    let bombTimer = setInterval(function updateTimer() {
+
+        if (detonationTimer === 0) {
+            alert('EXTERMINATE!');
+            document.body.innerHTML = '';
+        } else if (detonationTimer > 0) {
+            document.getElementById('timer').innerHTML = detonationTimer;
+        }
+
+        detonationTimer--;
+    }, 1000);
+
+
+    // TODO: When this function runs, it needs to
+    // cancel the interval/timeout for updateTimer()
+    function defuseTheBOM() {
+            clearInterval(bombTimer);
+    }
+
+    // Don't modify anything below this line!
+    //
+    // This causes the defuseTheBOM() function to be called
+    // when the "defuser" button is clicked.
+    // We will learn about events in the DOM lessons
+    var defuser = document.getElementById('defuser');
+    defuser.addEventListener('click', defuseTheBOM);
+})();
+</script>
+
+
+</body></html>

@@ -40,7 +40,7 @@
 
                         checkCredentials : function(userName, password){
                                 if(userName == 'user' && password == 'pass'){
-                                        return 'secret_key: 2342323k4ghv32';
+                                        return 'secret_key: flag{y0u-cR4cK3d-th3-c0d3}';
                                 }
                                 return 0;
                         }
@@ -54,12 +54,16 @@
         Marquis.job.putSalary('100000');
 
 
-        for(let userName = prompt('username');!Marquis.privateData.checkCredentials( userName, password)){
-
+        while(true){
+                let userName =  prompt('Username');
+                let password =  prompt('Password');
+                if(Marquis.privateData.checkCredentials(userName,password)){
+                        alert(Marquis.privateData.checkCredentials(userName,password));
+                        break;
+                }
                 alert('Username/Password Combo not accepted');
         }
 
-        alert(Marquis.privateData.checkCredentials(userName,password));
 
 
 
@@ -90,18 +94,16 @@
 
                 this.actions = {
                         checkHealth : function(){
-                                if(health > 0){
-                                        console.log('tiger is dead');
-                                        console.log(            '(\'--..--`)\n' +
+                                if(health <= 0){
+                                        return('tiger is dead \n' +
+                                                    '(\'--..--`)\n' +
                                                             '     .-- )( --.\n' +
                                                             '\n' +
                                                             '     .-/    \\-.\n' +
                                                             '    ( (  \\/  ) )\n' +
                                                             '     \' \'----\' \'\n' +
                                                             '        \'__\'');
-                                        return 0;
-                                }else{
-                                        return 1
+
                                 }
                         },
                         eatFood : function (foodType){
@@ -121,16 +123,49 @@
         }
 
         function kill(animal){
-                console.log(`Killing: ${animal.species} ${animal.name}`);
+                document.write(`Killing: ${animal.species} ${animal.name}`);
                 while(animal.actions.checkHealth()){
                         animal.actions.eatFood('poison');
                 }
+
         }
         let tiger = new Animal('tiger','carl','jungle');
         // console.log(tiger.species);
         // tiger.actions.eatFood('protein');
         // tiger.actions.eatFood('poison');
 
-        kill(tiger);
+        //first class functions
+        //first class function is a value like any other value
+        //all the things you can do with other values you can do with
+        //functions
+        //you can return functions out of functions
+
+        let wishlist = [10,14,40,57,23];
+        function checkPricesOfWishlist(wishlist){
+                wishlist.forEach( item=> {
+                        if(item > 50)
+                                return true;
+                });
+                return false;
+        }
+
+        function totalCost(arr){
+                arr.forEach((e_,_i,arr) => (_i !== 0) ? arr[0] += e_ : 0);
+                return arr[0];
+        }
+
+        checkPricesOfWishlist(wishlist);
+
+        let x = [1,2,3,4,5]
+
+        //first class functions take a function uses a function and returns
+        function doAll(func1, func2){
+                console.log(func1(wishlist), func2(x))
+        }
+
+        doAll(checkPricesOfWishlist, totalCost);
+
+        let tigerId = document.getElementById('tiger');
+
 
 })();

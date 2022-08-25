@@ -34,14 +34,11 @@
           for(let string of strArray){
                if(typeof string !== 'string')
                     return false;
-               if(string.length > strArray[0].length){
+               if(string.length > strArray[0].length)
                          strArray[0] = string;
-               }
-               
           }
           return strArray[0];
      }
-     
      console.log(longestString(['sds','1234','1234dsfsdfsdfsdf','123459']))
      
 })();

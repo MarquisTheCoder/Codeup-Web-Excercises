@@ -90,19 +90,41 @@
     //         Multiple Selectors
     //
 
-            $('h1').css('background-color','yellow');
-            $('p').css('background-color', 'yellow');
-            $('li').css('background-color','yellow')
+    //         $('h1').css('background-color','yellow');
+    //         $('p').css('background-color', 'yellow');
+    //         $('li').css('background-color','yellow')
+    //
+    //         $('li').css('font-size','20px');
+    //         $('h1, p, li').css('background-color','yellow');
+    //         alert($('h1').html());
+    // // Combine your selectors that highlight all the h1, p, and li elements.
+    //
+    //
+    //         $('html').mousedown(()=>{
+    //                 alert('page has been clicked')
+    //         })
 
-            $('li').css('font-size','20px');
-            $('h1, p, li').css('background-color','yellow');
-            alert($('h1').html());
-    // Combine your selectors that highlight all the h1, p, and li elements.
+                    /*
+                    *
 
+                     Remove your custom jQuery code from previous exercises.
 
-            $('html').mousedown(()=>{
-                    alert('page has been clicked')
-            })
+                     Add jQuery code that will change the background color of an h1 element when clicked.
+
+                     Make all paragraphs have a font size of 18px when they are double clicked.
+
+                     Set all li text color to red when the mouse is hovering; reset to black when it is not.
+
+                     *
+                    *
+                    *
+                    * */
+
+            $('h1').click( () => $('h1').css('background-color','red'));
+            $('p').dblclick(() => $('p').css('font-size', '18px'));
+            $('li').mouseenter(() => $('li').css('color', 'red'));
+            $('li').mouseleave(() => $('li').css('color', 'black'))
+
 });
 </script>
 

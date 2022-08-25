@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>konami.html</title>
+    <meta name='description' content="cheat code checker and hash">
+    <title>Konami CheatCode</title>
 </head>
 <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js" integrity="sha512-szJ5FSo9hEmXXe7b5AUVtn/WnL8a5VofnFeYC2i2z03uS2LhAch7ewNLbl5flsEmTTimMN0enBZg/3sQ+YOSzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -13,8 +14,8 @@
               const checksum = 'e1403a17882dec55d191e45751a0b9a08467d76c647b4e09d53960a724940084';
               $(document).on('keyup', function(event){
                       string += `${event.key} `;
-                      if(event.key == 'Enter'){
-                               if(sha256(string) == checksum){
+                      if(event.key === 'Enter'){
+                               if(sha256(string) === checksum){
                                        $(document.body).css('background-color','green');
                                        alert('You have gained 30 lives!');
                                        let coins = $('<img>');

@@ -1,0 +1,14 @@
+
+html{
+    background-color: tan;
+
+}
+.fancy-header{
+    color: purple;
+    text-decoration: underline;
+}
+
+h1.fancy-header{
+    text-align: center;
+}
+

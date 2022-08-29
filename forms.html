@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+<script></script>
+
+<!--Testing the HTTP post with an boomerang API-->
+<form method="GET" action="https://request-inspector.glitch.me/">
+
+<!--    Label and input for email-->
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="Enter your email">
+
+<!--    Label and input for password-->
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Enter your password">
+
+<!--    Label for and textarea for bio-->
+    <label for="bio">User Bio</label>
+    <textarea name="bio" id="bio" cols="60" rows="40" placeholder="Enter Your Bio"></textarea>
+
+<!--    Label for user ad analytics-->
+    <section class="user-pool-data">
+        <label for="choice-1"><h3>How did you hear about us?:</h3></label>
+        <input type="radio" name="choice-1" id="choice-1" value="billboard">
+        <input type="radio" name="choice-2" id="choice-2" value="radio advertisement">
+        <input type="radio" name="choices"  id="choice-3" value="internet advertisement">
+        <input type="radio" name="choices"  id="choice-4" value="other">
+    </section>
+
+<!--   Label for user browser analytics-->
+    <section class="user-pool-data">
+        <label for="user-web-browser"></label>
+        <select name="user-web-browser" id="user-web-browser">
+            <option value="chrome">Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="safari">Safari</option>
+            <option value="ie">Internet Explorer? ....Really?</option>
+        </select>
+    </section>
+
+    <input type="submit">
+</form>
+</body>
+</html>

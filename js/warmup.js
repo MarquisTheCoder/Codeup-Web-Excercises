@@ -84,15 +84,33 @@
      }
      
      
-     function beerCanPyramid(bonus, costOfCan) {
+     function beeramid(bonus, costOfCan) {
           /*level , amount spend*/
-          let pyramid = [1,0];
-          for(; pyramid[1] <= bonus; pyramid[0]++)
-               pyramid[1] += (pyramid[0] ** 2) * costOfCan;
-          return pyramid[0];
+          let pyramid = [0,0];
+          while(pyramid[1] <= bonus){
+                pyramid[0]++
+               let spend = (pyramid[0] ** 2) * costOfCan;
+               if(pyramid[1] + spend > bonus){
+                    return pyramid[0]-1;
+               }
+               pyramid[1] += spend;
+              
+               
+               console.log(`level: ${pyramid[0]}`)
+               console.log(`number of cans: ${pyramid[0] ** 2}\nTotal: ${pyramid[1]}\n`);
+              
+               
+          }
+          
           
           
           
      }
+     
+     console.log(desirableNeighborhood(neighborhood1));
+     console.log(desirableNeighborhood(neighborhood2));
+     console.log(desirableNeighborhood(neighborhood3));
+     
+     console.log(beeramid(5000, 3));
 
 })();

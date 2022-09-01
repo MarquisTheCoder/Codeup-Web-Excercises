@@ -1,0 +1,152 @@
+
+/*
+weighted order of precedence;
+
+/*!important| inline |  id   |  class | type*/
+/*  value   | value  | value | value  | value*/
+/**!*/
+
+/*!*type weight: 0,0,0,0,1*!*/
+/*body{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    background-color: goldenrod;*/
+/*}*/
+
+/*!*type weight: 0,0,0,0,1*!*/
+/*h1 {*/
+/*    text-align: center*/
+/*}*/
+
+/*!*class weight: 0,0,0,1,0*!*/
+/*.fancy-header{*/
+/*    color: purple;*/
+/*}*/
+
+/*!*id weight: 0,0,1,0,0*!*/
+/*#header{*/
+/*    color: darkcyan;*/
+/*    text-decoration: underline;*/
+
+/*}*/
+
+/*what is cascade */
+/*The cascade is an algorithm that defines how user agents combine property values originating from different sources.
+ The cascade defines the origin and layer that takes precedence when declarations in more than one origin or cascade
+  layer set a value for a property on an element.*/
+
+
+
+
+/*selector combinations*/
+/* more specific 0 - 0 - 0 - 0 - 0 less specific */
+/* !important - inline - id - value - type */
+
+/*body{*/
+/*    background-color: goldenrod;*/
+/*}*/
+
+/*.fancy-header{*/
+/*    color: purple;*/
+/*}*/
+
+/*h1 { text-align: center }*/
+
+/*#header{*/
+/*    text-decoration: underline;*/
+/*}*/
+
+
+/*
+weighted order of precedence;
+
+!important| inline |  id   |  class | type
+  value   | value  | value | value  | value
+*/
+
+/*!*0,0,0,0,1*!*/
+/*body{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    background-color: goldenrod;*/
+/*}*/
+
+/*!*0,0,0,0,1*!*/
+/*h1 {*/
+/*    text-align: center*/
+/*}*/
+
+/*!*0,0,0,1,0*!*/
+/*.fancy-header{*/
+/*    color: purple;*/
+/*}*/
+
+/*!*id weight 0,0,1,0,0*!*/
+/*#header{*/
+/*    color: darkcyan;*/
+/*    text-decoration: underline;*/
+
+/*}*/
+/*white_check_mark*/
+/*+1*/
+/*raised_hands*/
+
+
+
+
+
+
+/*
+weighted order of precedence;
+
+/important| inline |  id   |  class | type
+  value   | value  | value | value  | value
+*/
+
+/*type weight: 0,0,0,0,1*/
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: goldenrod;
+    justify-content: center;
+    text-align: center;
+}
+
+/*type weight: 0,0,0,0,1*/
+h1 {
+    text-align: center
+}
+
+/*class weight: 0,0,0,1,0*/
+.fancy-header{
+    color: purple;
+}
+
+/*id weight: 0,0,1,0,0*/
+/*#header{*/
+/*    color: darkcyan;*/
+/*    text-decoration: underline;*/
+
+/*}*/
+
+#footer{
+    text-align: center
+}
+
+table {
+    justify-content: center;
+    table-layout: fixed;
+    width: 900px;
+    text-align: center;
+    border: 2px solid black;
+
+
+}
+
+
+td {
+    border: 1px solid gray;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

@@ -21,17 +21,24 @@ body {
 }
 
 .cover {
+    display: flex;
     height: 100vh;
     width: 100%;
+
     /* TODO: add a flex container to this selector */
 }
 
 .flex-form {
     display: flex;
+    justify-self: center;
+    align-self: center;
     z-index: 10;
     position: relative;
     border: 20px solid rgba(0, 0, 0, 0.3);
     border-radius: 5px;
+    margin: 0 auto;
+    height: 5em;
+
     /* TODO: Add an automatic margin and a flex container to this selector */
 }
 

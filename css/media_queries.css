@@ -80,7 +80,19 @@
     .sub-section > p {
         font-style: italic;
     }
+    footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 250px;
+        display: flex;
+        width: 100%;
+    }
 
+    svg{
+        height: 20px;
+        width: 20px;
+    }
 @media screen and (min-width: 900px) {
 
     html{
@@ -156,6 +168,7 @@
     footer{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding-top: 250px;
         display: flex;
         width: 100%;

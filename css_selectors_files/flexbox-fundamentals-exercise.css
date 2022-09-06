@@ -148,6 +148,7 @@ section:nth-of-type(6) {
 }
 
 .grey-box {
+    align-items: center;
     background: grey;
     width: 3em;
     height: 3em;
@@ -156,5 +157,7 @@ section:nth-of-type(6) {
 
 .grey-box:nth-of-type(odd) {
     height: 4em;
-
+}
+.grey-box:nth-of-type(6n){
+    visibility: hidden;
 }

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Work+Sans:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: #c1c1c1;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+h1#logo{
+    font-family: 'Montserrat','Work Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+ul li{
+    padding-left: 1vw;
+    list-style: none;
+    font-size: 1vw;
+}
+
+svg{
+    width: 2vw;
+    height: 2vw;
+}
+ul#icons{
+    font-weight: bold;
+}
+@media screen and (max-width: 992px) {
+    ul li{
+        font-size: 1.5vw;
+    }
+}
+@media screen and (max-width: 768px) {
+    ul li{
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width: 576px){
+    ul li{
+        font-size: 3vw;
+    }
+}

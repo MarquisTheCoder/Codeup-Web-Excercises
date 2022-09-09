@@ -1,3 +1,8 @@
 .background{
     background-image: url("../pizza.png");
 }
+h1{
+    background-color: #c1c1c190;
+    text-align: center;
+    color: white;
+}

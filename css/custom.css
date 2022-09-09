@@ -1,5 +1,7 @@
 .background{
     background-image: url("../pizza.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 h1{
     background-color: #c1c1c190;

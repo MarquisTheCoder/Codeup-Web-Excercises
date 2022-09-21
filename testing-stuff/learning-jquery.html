@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>learning-jquery.html</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+
+<button id="test-btn">test button</button>
+<button id="test-btn-2">test button 2</button>
+<script>
+	
+	$('#test-btn').on('click', () => alert('test button 2'))
+	window.onload = () => {
+		$('html').innerHTML += '<h1>HELLO</h1>';
+	}
+</script>
+
+</body>
+</html>

@@ -11,24 +11,35 @@
 <script>
       $(function(){
               let string = '';
+			  //hash of correct konami code combination
               const checksum = 'e1403a17882dec55d191e45751a0b9a08467d76c647b4e09d53960a724940084';
+			  
               $(document).on('keyup', function(event){
+	                  //adds event key to string
                       string += `${event.key} `;
+					  
+					  //on user enter the inputted string
+	                  //is hashed anc compared to the checksum
+	                  //if they are equal you've correctly entered the code
                       if(event.key === 'Enter'){
                                if(sha256(string) === checksum){
                                        $(document.body).css('background-color','green');
                                        alert('You have gained 30 lives!');
                                        let coins = $('<img>');
-
+									   
+									   //adds a random coin the the webpage on successful completion of the code
                                        coins.attr('src','https://w7.pngwing.com/pngs/908/165/png-t' +
                                                'ransparent-gold-coin-money-coins-gold-' +
                                                'material-coins-thumbnail.png');
 
                                        $('body').append(coins);
                                }else{
+	                                   //on wrong code show the user they suck
                                        $(document.body).css('background-color', 'red');
                                        alert('That was the wrong code');
                                }
+							   
+							   //reset the string
                                string = '';
                       }
               })

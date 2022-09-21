@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery_exercises.html</title>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<h1 id="header">This is a test</h1>
+<p class="codeup" id="main-paragraph">this is my main paragraph</p>
+
+<ul id="main-list">
+	<li class="codeup">list-1</li>
+	<li class="codeup">list-2</li>
+	<li class="">list-3</li>
+</ul>
+<script>
+	"use strict"
+	
+	
+	
+	$(function(){
+		// alert('window has finished loading')
+		// // $('.codeup').css('border', 'solid 1px red');
+		// $('li').css('font-size','20px');
+		// $('h1, p , li').css('background-color', 'yellow');
+		// alert($('h1').text())
+		
+		$('h1').on('click', () =>  $('h1').css('background-color', 'red') );
+		
+	});
+	
+</script>
+</body>
+</html>

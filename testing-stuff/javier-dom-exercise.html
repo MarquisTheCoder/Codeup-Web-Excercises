@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width">
+	<title>Javier Dom Exercise</title>
+</head>
+
+<body>
+	<style>
+		
+		*{
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		
+		nav{
+			display: flex;
+			justify-content: center;
+			padding: 30px;
+			width: 100vw;
+		}
+		
+		body{
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: center;
+			align-items: center;
+			background-color: ghostwhite;
+		}
+		.square{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 20vw;
+			height: 20vw;
+			box-shadow: 0px 10px 36px 30px rgba(0,0,0,0.1);
+			border-radius: 2px;
+			margin: 40px;
+		}
+		.square:hover{
+			cursor: pointer;
+			width: 25vw;
+			height: 25vw;
+		}
+		.red{
+			background-color: red;
+		}
+		.blue{
+			background-color: blue;
+		}
+		.violet{
+			background-color: violet;
+		}
+		
+		main{
+			display: flex;
+			flex-flow: row nowrap;
+		}
+		.number{
+			font-size: 10em;
+			color: white;
+		}
+	</style>
+	
+	<header>
+		<nav>
+			<h1>My boxes</h1>
+		</nav>
+	</header>
+	
+	<main>
+		<section class="square red">
+		    <div class="number">1</div>
+		</section>
+		
+		<section class="square blue">
+			<div class="number">2</div>
+		</section>
+		
+		<section class="square violet">
+			<div class="number">3</div>
+		</section>
+	</main>
+	
+	<script>
+		
+		let squares = document.querySelectorAll('.square');
+		squares = Array.from(squares);
+		squares.forEach(function(square){
+			square.onclick = function(){
+				alert(`you have selected ${square.classList[1].toUpperCase()} square`);
+				let numberElement = square.querySelector('.number');
+				let number = parseFloat(numberElement.innerHTML);
+				number+=1;
+				numberElement.innerHTML = `${number}`;
+			}
+		})
+	
+	</script>
+</body>
+</html>

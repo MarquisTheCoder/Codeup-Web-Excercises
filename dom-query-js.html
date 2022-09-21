@@ -127,6 +127,7 @@ embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style></h
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -162,10 +163,12 @@ embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style></h
 
         // TODO: Set the text color of subHeader to blue
         subHeader.style.color = 'blue';
+		
         // TODO: Uncomment the next line and get all list items
         let listItems = document.getElementsByTagName('li');
+		
         // TODO: Set text color on every other list item to grey
-
+	    
 
 // GETELEMENTSBY TAGNAME DOES NOT RETURN ACTUAL ARRAY HERES THE FIX!!!
 // // 👇️ convert to array with Array.from()
@@ -182,15 +185,16 @@ embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style></h
 //             });
 
             listItems = Array.from(listItems);
-            listItems.forEach(item => {
-                item.style.color = 'grey';
+            listItems.forEach((item, index)=> {
+				if(index % 2 == 0)
+                    item.style.color = 'grey';
         })
 
         // TODO: Set text color of li with dbid = 1 to blue
         listItems.forEach((list, index) => {
-                if(list.getAttribute('data-dbid') === '1') {
+                if(list.getAttribute('data-dbid') === '1')
                         list.style.color = 'blue';
-                }
+                
         });
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         let subParagraphs = document.getElementsByClassName('sub-paragraph');
@@ -211,10 +215,13 @@ embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style></h
 
     document.getElementById('btn1').addEventListener('click', () =>
             mainHeader.innerHTML = 'JavaScript is Cool');
+	
     document.getElementById('btn2').addEventListener('click', () =>
             document.getElementsByTagName('html')[0].style.backgroundColor = 'cyan');
+	
     document.getElementById('btn3').addEventListener('click', () =>
             document.getElementsByTagName('html')[0].style.fontFamily = 'Brush Script MT');
+	
     document.getElementById('btn4').addEventListener('click', () => window.location = 'https://google.com');
     })();
 

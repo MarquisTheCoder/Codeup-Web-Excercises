@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width">
+	
+	<title>National Park Faq</title>
+	
+	<!-- importing jquery cdn -->
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+	        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+	        crossorigin="anonymous"></script>
+	
+	<!-- import bootstrap javascript cdn -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+	        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+	        crossorigin="anonymous"></script>
+	
+	<!-- importing bootstrap css cdn -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+	      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+	      crossorigin="anonymous">
+	
+	
+</head>
+<body class="bg-secondary bg-opacity-50 justify-content-center">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Source+Sans+Pro&display=swap');
+		
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+		h1{
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+		.invisible{
+			display: none;
+		}
+		dt{
+			margin: 10px!important;
+		}
+		dd{
+			padding-top: 20px!important;
+			padding-bottom: 20px!important;
+		}
+		
+	</style>
+	
+	
+	<!-- creating a bootstrap navbar element
+	and displaying it contents in the center-->
+	<nav class="navbar justify-content-center">
+		
+		<h1 class="
+		justify-content-center
+		text-center bg-dark rounded-pill
+		bg-opacity-50 p-3 text-white">
+			National Parks FAQ
+		</h1>
+	</nav>
+	
+	<!-- main section container for the faq questions -->
+	<section class="container justify-content-center align-items-center m-5 bg-dark p-0">
+		
+		<dl class="container-fluid justify-content-center ">
+			
+			<!-- Setting each of the FAQ questions to display center and dark-->
+			<dt class="row bg-dark text-white justify-content-center">
+				How many acres does the national park service protect?
+			</dt>
+			
+			<!-- Setting each of the FAQ answers to display blue and width a reasonable margin-->
+			<dd class="row invisible justify-content-center bg-primary">84 million acres</dd>
+			
+			<dt class="row bg-dark text-white justify-content-center">Where is Ribbon falls national park?</dt>
+			<dd class="row invisible justify-content-center bg-primary">Yosemite National Park.</dd>
+			
+			<dt class="row bg-dark text-white justify-content-center">
+				Where was the hottest tempature on earth recorded in 1913?
+			</dt>
+			<dd class="row invisible justify-content-center bg-primary">Death Valley National Park.</dd>
+			
+			<dt class="row bg-dark text-white justify-content-center">
+				What's the most glaciated peak in the contiguous U.S?
+			</dt>
+			<dd class="row invisible justify-content-center bg-primary">Mount Rainier with 26 glaciers.</dd>
+			
+			<dt class="row bg-dark text-white justify-content-center">
+				How many visitor centers are in the National Park System?
+			</dt>
+			<dd class="row invisible justify-content-center bg-primary">879.</dd>
+			
+		</dl>
+		
+		<button class="justify-content-center text-center btn btn-outline-secondary w-100"
+		        id="reveal-answers"> Display Answers
+		</button>
+		
+		
+	</section>
+	
+	<script>
+		
+		//setting and removing invisible class on
+		//the dd elements to emulate popping in and
+		//out.
+		const $dd = $('dd');
+		$('#reveal-answers').on('click', ()=>{
+			if($dd.hasClass('invisible')){
+				$dd.removeClass('invisible')
+			}else{
+				$dd.addClass('invisible')
+			}
+		})
+		
+	</script>
+
+	
+</body>
+</html>

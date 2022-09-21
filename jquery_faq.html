@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1, width=device-width">
 	
-	<title>National Park Faq</title>
+	<title>National Park FAQ</title>
 	
 	<!-- importing jquery cdn -->
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"
@@ -32,8 +32,16 @@
 			margin: 0;
 			font-family: 'Source Sans Pro', sans-serif;
 		}
+		body{
+			background: url("https://wallpaperaccess.com/full/1302133.jpg")!important;
+			background-size: cover;
+			
+		}
 		h1{
 			font-family: 'Source Sans Pro', sans-serif;
+		}
+		h1:hover{
+			background-color: #0d1b1dbb!important;
 		}
 		.invisible{
 			display: none;
@@ -41,9 +49,15 @@
 		dt{
 			margin: 10px!important;
 		}
+		dt:hover{
+			background-color: #0d1b1d!important;
+		}
 		dd{
 			padding-top: 20px!important;
 			padding-bottom: 20px!important;
+		}
+		li{
+			list-style: none;
 		}
 		
 	</style>
@@ -62,7 +76,7 @@
 	</nav>
 	
 	<!-- main section container for the faq questions -->
-	<section class="container justify-content-center align-items-center m-5 bg-dark p-0">
+	<section class="container justify-content-center align-items-center m-5 bg-dark  bg-opacity-7 p-0">
 		
 		<dl class="container-fluid justify-content-center ">
 			
@@ -72,25 +86,25 @@
 			</dt>
 			
 			<!-- Setting each of the FAQ answers to display blue and width a reasonable margin-->
-			<dd class="row invisible justify-content-center bg-primary">84 million acres</dd>
+			<dd class="row invisible justify-content-center bg-primary bg-opacity-25 text-white">84 million acres</dd>
 			
 			<dt class="row bg-dark text-white justify-content-center">Where is Ribbon falls national park?</dt>
-			<dd class="row invisible justify-content-center bg-primary">Yosemite National Park.</dd>
+			<dd class="row invisible justify-content-center bg-primary bg-opacity-50 text-white">Yosemite National Park.</dd>
 			
 			<dt class="row bg-dark text-white justify-content-center">
 				Where was the hottest tempature on earth recorded in 1913?
 			</dt>
-			<dd class="row invisible justify-content-center bg-primary">Death Valley National Park.</dd>
+			<dd class="row invisible justify-content-center bg-primary bg-opacity-25 text-white">Death Valley National Park.</dd>
 			
 			<dt class="row bg-dark text-white justify-content-center">
 				What's the most glaciated peak in the contiguous U.S?
 			</dt>
-			<dd class="row invisible justify-content-center bg-primary">Mount Rainier with 26 glaciers.</dd>
+			<dd class="row invisible justify-content-center bg-primary bg-opacity-50 text-white">Mount Rainier with 26 glaciers.</dd>
 			
 			<dt class="row bg-dark text-white justify-content-center">
 				How many visitor centers are in the National Park System?
 			</dt>
-			<dd class="row invisible justify-content-center bg-primary">879.</dd>
+			<dd class="row invisible justify-content-center bg-primary bg-opacity-25 text-white">879.</dd>
 			
 		</dl>
 		
@@ -99,6 +113,33 @@
 		</button>
 		
 		
+		
+	</section>
+	
+	<section class="container">
+		<ul class="row bg-dark bg-opacity-25 p-3 text-center">
+			<h3 class="text-white bg-dark">Yellow Stone National Park</h3>
+			<li class="text-white">Yellow Stone National Park is 3,500 sq-miles!</li>
+			<li class="text-white">Yellow Stone National Park is an active super volcano!</li>
+			<li class="text-white">Yellow Stone National Park has an inn that is a century old!</li>
+			<li class="text-white">Yellow Stone National Park is the worlds first national park!</li>
+		</ul>
+		
+		<ul class="row bg-dark bg-opacity-25 p-3 text-center">
+			<h3 class="text-white bg-dark">Zion National Park</h3>
+			<li class="text-white">The word "Zion" is ancient Hebrew for sanctuary!</li>
+			<li class="text-white">Zion National Park has over 4.3 million visitors a year!</li>
+			<li class="text-white">Zion National Parks "Angel Landing" is one of the most dangerous views on earth!</li>
+			<li class="text-white">Zion National Parks "Virgin River" removes 1 million tons of sediment a year!</li>
+		</ul>
+		
+		<ul class="row bg-dark bg-opacity-50 p-3 text-center">
+			<h3 class="text-white bg-dark">Bryce Cannon National Park</h3>
+			<li class="text-white">Bryce Canyon National Park covers a total area of 35,835 acres!</li>
+			<li class="text-white">Bryce Canyon National Park was made a national park on September 15, 1928!</li>
+			<li class="text-white">The highest elevation found in Bryce Canyon is 9,115 feet at Rainbow Point!</li>
+			<li class="text-white">Bryce Canyon National Park lies in the Mountain time zone!</li>
+		</ul>
 	</section>
 	
 	<script>
@@ -113,6 +154,22 @@
 			}else{
 				$dd.addClass('invisible')
 			}
+		})
+		
+		$('h3').each((_, h3) => {
+			$(h3).on('click',() => {
+				$(h3).siblings().each((_, listItem) =>{
+					$(listItem).css('font-weight', 'bold')
+				})
+			})
+		})
+		
+		$('li').each((_, listItem) => {
+			$(listItem).on('click', () => {
+				$(listItem).parent().children('li').first().removeClass('text-white')
+				$(listItem).parent().children('li').first().css('color','#5DA3FD')
+			})
+			
 		})
 		
 	</script>

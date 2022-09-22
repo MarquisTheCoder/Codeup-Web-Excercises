@@ -170,7 +170,8 @@
 
 		// TODO: Take the data from inventory.json and append it to the products table
 			function onSuccess(data, status, xhr){
-				console.log(data)
+				console.log(status)
+				console.log(xhr)
 				data.forEach(product => {
 					inventoryTbody.html(' ')
 					inventoryTbody.append(`

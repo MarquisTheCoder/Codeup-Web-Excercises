@@ -24,16 +24,18 @@
 		        crossorigin="anonymous"></script>
 	</head>
 	<body class="container-fluid w-100 h-100 d-flex align-items-center align-content-center justify-content-center">
-		<section id="post" class="bg-dark">
-
-		</section>
+		<section id="post" class="bg-dark"></section>
 		<script>
+			
 			const blogPost = () => $.get('data/blog.json')
+			
 			const postElement = $('#post')
+			
 			function onSuccess(data, status, xhr){
 				
 				postElement.html('')
 				
+				console.log(data)
 				data.forEach(post => {
 					postElement.append(`
 						<section class="my-4">
@@ -43,8 +45,9 @@
 					`)
 				})
 			}
-			blogPost().done(onSuccess)
-			// setInterval(blogPost().done(onSuccess), 0x14)
+			
+			
+			setInterval(blogPost().done(onSuccess), 0x14)
 		</script>
 	</body>
 </html>

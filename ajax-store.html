@@ -5,7 +5,11 @@
 		<meta name="viewport" content="initial-scale=1, width=device-width">
 
 		<title>Introducing the IOS iHammer</title>
-
+		
+		<!-- jquery cdn -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+	        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	        crossorigin="anonymous"></script>
 		<!-- bootstrap css cdn -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
 		      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
@@ -21,13 +25,10 @@
 		        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
 		        crossorigin="anonymous"></script>
 		
-		<!-- jquery cdn -->
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-	        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-	        crossorigin="anonymous"></script>
+		
 	</head>
 
-	<body>
+	<body class="p-0 m-0">
 		<style>
 			.bg-dark{
 				background-color: black!important;
@@ -52,33 +53,47 @@
 				width: 20px;
 				filter: invert(100%);
 			}
+			#shovel-apple-logo{
+				width: 50px;
+				height: 57px;
+				filter: brightness(0) invert(1);
+			}
+			#shovel-img{
+				width: 38vw;
+			}
 		</style>
 
 
 		<header>
-			<nav class="navbar bg-dark text-white align-content-center">
-				<div>
+			<nav class="navbar bg-dark text-white align-content-center w-100">
+				<section>
 					<button id="refresh-page">
 						<img id="logo" src="https://freepngimg.com/save/25358-apple-logo-transparent-image/444x506" alt="">
 					</button>
-				</div>
+				</section>
 				
 				<ul class="row align-content-center justify-content-center">
 					<li><a class="nav-item text-decoration-none px-3" href="">iHammer</a></li>
 					<li><a class="nav-item text-decoration-none px-3" href="">iDrill</a></li>
 					<li><a class="nav-item text-decoration-none px-3" href="">iMower</a></li>
 					<li><a class="nav-item text-decoration-none px-3" href="">iDriver</a></li>
+					<li><a class="nav-item text-decoration-none px-3" href="">iShovel</a></li>
 				</ul>
 				
-				<ul>
+				<ul class="d-flex align-content-center align-items-center justify-content-center">
 					<li>
-						<a href="">
-							<img id="search-icon" src="https://img.icons8.com/ios/500/search--v4.png" alt="">
+						<a href="#">
+							<img src="https://img.icons8.com/ios/500/search--v4.png"
+							     id="search-icon"
+							     class=""
+							     alt="">
 						</a>
 					</li>
 					<li>
-						<a href="">
-							<img src="https://www.apple.com/ac/globalnav/7/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_bag_image__yzte50i47ciu_large.svg" alt="">
+						<a href="#">
+							<img src="https://www.apple.com/ac/globalnav/7/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_bag_image__yzte50i47ciu_large.svg"
+							     class="px-3"
+							     alt="">
 						</a>
 					</li>
 				</ul>
@@ -88,21 +103,57 @@
 		</header>
 
 		<main>
+			<section id="hammer-section" class="container-fluid w-100 mt-5 mx-auto">
+				<h1 class="text-center display-4">Introducing IOS iHammer</h1>
+				<h2 class="text-center display-6 text-secondary">Strike. Beyond.</h2>
+				
+				<img src="https://freepngimg.com/thumb/hammer/9-hammer-png-image-picture.png"
+				     class="d-flex justify-content-center mx-auto mt-1"
+				     alt="">
+			</section>
+			
+			<section id="shovel-section" class="container-fluid d-flex-column bg-dark w-100 text-white">
+				
+				<section id="shovel-section-header" class="d-flex justify-content-center align-items-center pt-4">
 
+					<img id="shovel-apple-logo"
+					     src="https://freepngimg.com/save/25358-apple-logo-transparent-image/444x506"
+					     alt="">
+					
+					<h1 class="text-center display-4 pt-3">IShovel</h1>
+					
+				</section>
+				<section class="d-flex w-100 justify-content-center">
+					<img src="https://www.transparentpng.com/thumb/shovel/CTaQzl-shovel-transparent-picture.png"
+					     id="shovel-img"
+				         class="m-4"
+				         alt="">
+				</section>
+				
+				
+			</section>
+			
 		</main>
 
 		<footer>
-			<table id="products">
-				<thead>
-				<tr>
-					<th>Title</th>
-					<th>Quantity</th>
-					<th>Price</th>
-					<th>Categories</th>
-				</tr>
-				</thead>
-				<tbody id="insertProducts"></tbody>
-			</table>
+			
+			
+			<section class="container-fluid d-flex justify-content-center">
+				
+				<table class="mt-4" id="products">
+					<thead>
+						<tr class="bg-dark text-white">
+							<th>Title</th>
+							<th>Quantity</th>
+							<th>Price</th>
+							<th>Categories</th>
+						</tr>
+					</thead>
+					<tbody id="insertProducts"></tbody>
+				</table>
+				
+			</section>
+			
 		</footer>
 
 

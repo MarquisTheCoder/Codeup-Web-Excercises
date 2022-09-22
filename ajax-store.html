@@ -170,6 +170,7 @@
 
 		// TODO: Take the data from inventory.json and append it to the products table
 			function onSuccess(data, status, xhr){
+				console.log(data)
 				data.forEach(product => {
 					inventoryTbody.html(' ')
 					inventoryTbody.append(`
@@ -188,10 +189,7 @@
 		//       HINT: You will want to target #insertProducts for your new HTML elements
 		})();
 	</script>
-		<!-- jquery cdn -->
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-		        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-		        crossorigin="anonymous"></script>
+
 
 	</body>
 </html>

@@ -10,6 +10,7 @@
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"
 	        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 	        crossorigin="anonymous"></script>
+		
 		<!-- bootstrap css cdn -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
 		      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
@@ -164,14 +165,34 @@
 		(function() {
 			"use strict";
 		// TODO: Create an AJAX GET request for the file under data/inventory.json
+			const inventoryRequest = () => $.get('data/inventory.json')
+			const inventoryTbody = $('#insertProducts')
 
 		// TODO: Take the data from inventory.json and append it to the products table
+			function onSuccess(data, status, xhr){
+				data.forEach(product => {
+					inventoryTbody.html(' ')
+					inventoryTbody.append(`
+						<tr>
+							<td>${product.title}</td>
+							<td>${product.quantity}</td
+							<td>${product.price}$</td>
+							<td>${product.categories.join(' ')}</td>
+						</tr>
+					`)
+				})
+			}
 		//       HINT: Your data should come back as a JSON object; use console.log() to inspect
 		//             its contents and fields
+			inventoryRequest().done(onSuccess())
 		//       HINT: You will want to target #insertProducts for your new HTML elements
 		})();
 	</script>
+		<!-- jquery cdn -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		        crossorigin="anonymous"></script>
 
-</body>
+	</body>
 </html>
 >

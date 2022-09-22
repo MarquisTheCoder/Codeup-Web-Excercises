@@ -166,7 +166,8 @@
 		// TODO: Create an AJAX GET request for the file under data/inventory.json
 			const inventoryRequest = () => $.get('data/inventory.json')
 			const inventoryTbody = $('#insertProducts')
-
+			const refreshPage = $('#refresh-page')
+			
 		// TODO: Take the data from inventory.json and append it to the products table
 			function onSuccess(data, status, xhr){
 				inventoryTbody.html('')
@@ -185,7 +186,7 @@
 		//       HINT: Your data should come back as a JSON object; use console.log() to inspect
 		//             its contents and fields
 			inventoryRequest().done(onSuccess)
-			
+			refreshPage.on('click', () => inventoryRequest().done(onSuccess))
 		//       HINT: You will want to target #insertProducts for your new HTML elements
 		})();
 	</script>

@@ -29,8 +29,8 @@
 		</section>
 		<script>
 			const blogPost = () => $.get('data/blog.json')
+			const postElement = $('#post')
 			function onSuccess(data, status, xhr){
-				const postElement = $('#post')
 				
 				postElement.html('')
 				
@@ -43,7 +43,8 @@
 					`)
 				})
 			}
-			setInterval(blogPost().done(onSuccess), 0x14)
+			blogPost().done(onSuccess)
+			// setInterval(blogPost().done(onSuccess), 0x14)
 		</script>
 	</body>
 </html>

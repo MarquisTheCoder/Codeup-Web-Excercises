@@ -1,37 +1,125 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Online Store</title>
-</head>
-<body>
+	<head>
 
-<h1>My Tool Store</h1>
+		<meta name="viewport" content="initial-scale=1, width=device-width">
 
-<table id="products">
-	<thead>
-	<tr>
-		<th>Title</th>
-		<th>Quantity</th>
-		<th>Price</th>
-		<th>Categories</th>
-	</tr>
-	</thead>
-	<tbody id="insertProducts"></tbody>
-</table>
+		<title>Introducing the IOS iHammer</title>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<!-- bootstrap css cdn -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+		      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+		      crossorigin="anonymous">
 
-<script>
-	(function() {
-		"use strict";
+		<!-- bootstrap javascript cdn -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+		        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+		        crossorigin="anonymous"></script>
+		
+		<!-- bootstrap bundle cdn -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+		        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+		        crossorigin="anonymous"></script>
+		
+		<!-- jquery cdn -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+	        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	        crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<style>
+			.bg-dark{
+				background-color: black!important;
+			}
+			button{
+				background: none;
+				border: none;
+			}
+			#logo{
+				width: 3vw;
+			}
+			li{
+				list-style-type: none;
+			}
+			.nav-item{
+				color: white;
+			}
+			.nav-item:hover{
+				color:grey;
+			}
+			#search-icon{
+				width: 20px;
+				filter: invert(100%);
+			}
+		</style>
+
+
+		<header>
+			<nav class="navbar bg-dark text-white align-content-center">
+				<div>
+					<button id="refresh-page">
+						<img id="logo" src="https://freepngimg.com/save/25358-apple-logo-transparent-image/444x506" alt="">
+					</button>
+				</div>
+				
+				<ul class="row align-content-center justify-content-center">
+					<li><a class="nav-item text-decoration-none px-3" href="">iHammer</a></li>
+					<li><a class="nav-item text-decoration-none px-3" href="">iDrill</a></li>
+					<li><a class="nav-item text-decoration-none px-3" href="">iMower</a></li>
+					<li><a class="nav-item text-decoration-none px-3" href="">iDriver</a></li>
+				</ul>
+				
+				<ul>
+					<li>
+						<a href="">
+							<img id="search-icon" src="https://img.icons8.com/ios/500/search--v4.png" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="https://www.apple.com/ac/globalnav/7/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_bag_image__yzte50i47ciu_large.svg" alt="">
+						</a>
+					</li>
+				</ul>
+			</nav>
+			
+			
+		</header>
+
+		<main>
+
+		</main>
+
+		<footer>
+			<table id="products">
+				<thead>
+				<tr>
+					<th>Title</th>
+					<th>Quantity</th>
+					<th>Price</th>
+					<th>Categories</th>
+				</tr>
+				</thead>
+				<tbody id="insertProducts"></tbody>
+			</table>
+		</footer>
+
+
+	
+
+	<script>
+	
+		(function() {
+			"use strict";
 		// TODO: Create an AJAX GET request for the file under data/inventory.json
 
 		// TODO: Take the data from inventory.json and append it to the products table
 		//       HINT: Your data should come back as a JSON object; use console.log() to inspect
 		//             its contents and fields
 		//       HINT: You will want to target #insertProducts for your new HTML elements
-	})();
-</script>
+		})();
+	</script>
 
 </body>
 </html>

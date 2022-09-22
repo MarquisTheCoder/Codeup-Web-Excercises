@@ -30,5 +30,12 @@
     "tool"
   ],
   "price": 10
+},{
+  "title": "Shovel",
+  "quantity": 25,
+  "categories": [
+    "tool"
+  ],
+  "price": 10
 }
 ]

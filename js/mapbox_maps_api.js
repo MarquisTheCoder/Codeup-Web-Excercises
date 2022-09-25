@@ -13,9 +13,11 @@ $(function() {
      
      
      let mapboxCount = 0;
-     const MAPBOX_API_KEY= 'API KEY';
+     
+     const MAPBOX_API_KEY= '';
+     
      fetch('../data/config.json').then(function (config) {
-          console.log('API key:', config.MAPBOX_API_KEY)
+          MAPBOX_API_KEY = config.MAPBOX_API_KEY;
      });
      
      function addRestaurantMap(address, name){

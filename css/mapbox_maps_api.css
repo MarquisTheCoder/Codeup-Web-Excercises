@@ -1,6 +1,24 @@
+body{
+    background-color: #3B2D24;
+}
+#header-jumbo{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    min-width: 100vw;
+    min-height: 60vh;
+    hieght: 30vh;
+    background: url("https://images.alphacoders.com/246/thumb-1920-246273.jpg   ")!important;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
 
+}
 .main-container{
     width: 70vw;
     height: 80vh;
+    scrollbar-width: none;
+    overflow: scroll;
 }
-
+nav{
+    background-color: #000000aa;
+}

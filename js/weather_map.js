@@ -18,8 +18,8 @@ $(function(){
      const SEARCH_BUTTON = $('#search-location-btn')
      
      updateScreen(DEFAULT_CITY, MAPBOX_API_KEY);
-     $('#current-city').text(`${DEFAULT_CITY}`)
-     let currentCity = DEFAULT_CITY
+     // $('#current-city').text(`${DEFAULT_CITY}`)
+     // let currentCity = DEFAULT_CITY
      
      
      
@@ -53,9 +53,20 @@ $(function(){
           
           geocodeRestaurant(address, api_key)
           .then(mapCoordinates => {
+               
+               
                let longitude = mapCoordinates[0]
                let latitude = mapCoordinates[1]
-          
+               
+               function reverseGeocodeRestaurant(){
+                    let apiUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
+                    return fetch(`${apiUrl}${longitude},${latitude}.json?access_token=${api_key}`)
+                         .then((response) => response.json())
+                         .then((responseData) => responseData.features[0].place_name)
+               } 
+               reverseGeocodeRestaurant()
+                    .then(placeName => $('#current-city').html(`${placeName.split(',')[1]}`))
+               
                let apiCallUrl = 'https://api.openweathermap.org/data/2.5/' +
                     `forecast?lat=${latitude}&lon=${longitude}&` +
                     `appid=${WEATHERMAP_API_KEY}`

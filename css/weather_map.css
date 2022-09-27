@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+body{
+    background: url("https://cutewallpaper.org/25/anime-rain-wallpaper-gif/pin-on-moody-rain.gif");
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+}
+nav{
+    background-color: #091A1Eee;
+    height: 12vh;
+}
+#date{
+    color: #D2EDF4;
+}
+nav li{
+    list-style-type: none;
+}
+input{
+    background-color: #000000cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: smaller;
+}
+button{
+    font-size: smaller;
+}
+
+#map-container{
+    width: 95vw;
+    min-width: 95vw;
+    height: 60vh;
+    min-height: 60vh;
+    margin: 40px;
+    border-radius: 5px;
+    border: solid black 10px;
+}
+#search-location-btn{
+    background-color: black;
+    padding: 0 10px 0 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#current-city, #current-city-li{
+    font-size: x-small!important;
+}
+#current-city{
+    color: #ffffff77;
+}

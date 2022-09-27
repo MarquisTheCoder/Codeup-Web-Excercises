@@ -82,19 +82,10 @@ $(function(){
                $.get(apiCallUrl).done(response => {
                     
                     response.list.filter((_e, index) => index % 8 === 0).forEach((weatherMapObject, index) => {
-                         //date temp decriptions humidity wind pressure
-                         let weatherIndex = (index+1) * 8;
-                         console.log(weatherIndex)
-                         let lastIndex = weatherIndex - 8
-                         let dayData = response.list.splice(weatherIndex-8, weatherIndex);
-                         console.log(dayData)
-                         let averageTemp = dayData.reduce((acc, next)=>{
-                              return acc + parseInt(next.main.temp)
-                         },0) / dayData.length;
                          
                          generateCards(
                               epochDateConversion(weatherMapObject.dt),
-                              averageTemp,
+                              weatherMapObject.main.temp,
                               weatherMapObject.weather[0].description,
                               weatherMapObject.main.humidity,
                               weatherMapObject.wind.speed,

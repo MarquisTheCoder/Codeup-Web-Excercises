@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 body{
-    background: url("https://cutewallpaper.org/25/anime-rain-wallpaper-gif/pin-on-moody-rain.gif");
+    /*background: url("https://cutewallpaper.org/25/anime-rain-wallpaper-gif/pin-on-moody-rain.gif");*/
+    background: linear-gradient(#091C21, #0C262D, #143E4A, #1B5261);
     background-size: cover;
     font-family: 'Lato', sans-serif;
 }
 nav{
     background-color: #091A1Eee;
+    margin-bottom: 2.5em;
     height: 12vh;
 }
+
+
 #date{
     color: #D2EDF4;
 }
@@ -21,20 +25,31 @@ input{
     border: none;
     border-radius: 5px;
     padding-left: 10px;
-    font-size: smaller;
+    width: 50vw;
 }
 button{
     font-size: smaller;
 }
 
 #map-container{
-    width: 95vw;
-    min-width: 95vw;
+    width: 80vw;
+    min-width: 80vw;
     height: 60vh;
     min-height: 60vh;
     margin: 40px;
+    border-radius: 15px;
+    border: solid #00000033 2px;
+}
+
+.card-title{
     border-radius: 5px;
-    border: solid black 10px;
+}
+.data{
+    background-color: #31404455;
+    border-radius: 5px;
+}
+#map-background{
+    background-color: #0A141699;
 }
 #search-location-btn{
     background-color: black;
@@ -44,7 +59,7 @@ button{
     border-radius: 5px;
 }
 #current-city, #current-city-li{
-    font-size: x-small!important;
+    font-size: 2rem;
 }
 #current-city{
     color: #ffffff77;

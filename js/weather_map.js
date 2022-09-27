@@ -27,16 +27,16 @@ $(function(){
      let generateCards = function(
           date, temp, description, humidity, wind, pressure, icon){
           let cardTemplate = `
-            <div class="card m-2 bg-dark bg-opacity-50 text-white border-dark" style="width: 18rem;">
+            <div class="card m-2 card-main" style="width: 18rem; background-color: #091A1F">
                 <div class="card-body d-flex-column text-center">
-                     <h5 class="card-title text text-center" id="date">${date}</h5>
+                     <h5 class="card-title text text-center" id="date"style="background-color: #314044">${date}</h5>
                      <h6 class="card-subtitle mb-2 text-muted text-center mt-3">${parseInt(1.8*(parseInt(temp)-273) + 32)}&#8457;</h6>
                      <img src="http://openweathermap.org/img/w/${icon}.png" alt="">
                      <hr>
-                     <p class="card-text text-center">Description - ${description}</p><hr>
-                     <p class="card-text text-center">Humidity - ${humidity}</p><hr>
-                     <p class="card-text text-center">Wind - ${wind}</p><hr>
-                     <p class="card-text text-center">Pressure - ${pressure}</p>
+                     <p class="card-text text-center data">Description - ${description}</p><hr>
+                     <p class="card-text text-center data">Humidity - ${humidity}</p><hr>
+                     <p class="card-text text-center data">Wind - ${wind}</p><hr>
+                     <p class="card-text text-center data">Pressure - ${pressure}</p>
                 </div>
             </div>`
           WEATHER_INFO_CONTAINER.append(cardTemplate)
@@ -70,7 +70,8 @@ $(function(){
                let apiCallUrl = 'https://api.openweathermap.org/data/2.5/' +
                     `forecast?lat=${latitude}&lon=${longitude}&` +
                     `appid=${WEATHERMAP_API_KEY}`
-               
+              
+              $('#map-container').html('')
                mapboxgl.accessToken = MAPBOX_API_KEY;
                let map = new mapboxgl.Map({
                                                container: 'map-container',

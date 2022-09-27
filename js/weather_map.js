@@ -98,7 +98,7 @@ $(function(){
                     })
                     map.setCenter(mapCoordinates)
                     map.setZoom(14)
-               
+                    //setting marker
                     let marker = new mapboxgl.Marker()
                     .setLngLat(mapCoordinates)
                     .addTo(map)

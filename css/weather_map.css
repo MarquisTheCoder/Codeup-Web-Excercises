@@ -67,7 +67,8 @@ button{
     font-size: 2rem;
 }
 #current-city{
-    background-color: black;
+    background-color: #637E87;
+    border-radius: 15px;
     color: #ffffff77;
 }
 #main-icon{

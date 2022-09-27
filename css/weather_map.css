@@ -2,12 +2,13 @@
 
 body{
     /*background: url("https://cutewallpaper.org/25/anime-rain-wallpaper-gif/pin-on-moody-rain.gif");*/
-    background: linear-gradient(#091C21, #0C262D, #143E4A, #1B5261);
+    /*background: linear-gradient(#091C21, #0C262D, #143E4A, #1B5261);*/
+    background-color: #93B4BE;
     background-size: cover;
     font-family: 'Lato', sans-serif;
 }
 nav{
-    background-color: #091A1Eee;
+    background-color: #091A1E88;
     margin-bottom: 2.5em;
     height: 12vh;
 }
@@ -20,7 +21,7 @@ nav li{
     list-style-type: none;
 }
 input{
-    background-color: #000000cc;
+    background-color: #94CFDF33;
     color: white;
     border: none;
     border-radius: 5px;
@@ -45,22 +46,30 @@ button{
     border-radius: 5px;
 }
 .data{
-    background-color: #31404455;
+    background-color: #31404405;
     border-radius: 5px;
 }
-#map-background{
-    background-color: #0A141699;
-}
+/*#map-background{*/
+/*    background-color: #0A141699;*/
+/*}*/
 #search-location-btn{
-    background-color: black;
+    background-color: #00000000;
     padding: 0 10px 0 10px;
     color: white;
     border: none;
     border-radius: 5px;
 }
+#search-icon{
+    height: 25px;
+    width: 27px;
+}
 #current-city, #current-city-li{
     font-size: 2rem;
 }
 #current-city{
+    background-color: black;
     color: #ffffff77;
+}
+#main-icon{
+    height: 40px;
 }

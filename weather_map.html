@@ -35,7 +35,7 @@
 
 		<!-- mapbox api css -->
 		<link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
-		
+		<link rel="icon" type="image/x-icon" href="https://iconarchive.com/download/i94299/bokehlicia/captiva/cloud.ico">
 		<!-- custom weather map css -->
 		<link rel="stylesheet" href="css/weather_map.css">
 		<!-- storage for api keys -->
@@ -49,12 +49,13 @@
 		<header>
 			
 			<!--creating the blue nav bar in the example-->
-			<nav class="align-items-center align-content-center w-100">
+			<nav class="align-items-center align-content-center w-100 sticky-top">
 				<!-- aligning the content along the y axis and spacing them across the webpage -->
 				<ul class="d-flex w-100 h-100 justify-content-between align-items-center text-white">
 					<li>
 						<!-- styling the webpage to give the logo a background -->
 						<div class="p-3 rounded-pill fs-5">
+							<img id="main-icon"src="https://cdn3d.iconscout.com/3d/premium/thumb/cloudy-weather-3311758-2754892.png" alt="">
 							Weather Map
 						</div>
 					</li>
@@ -64,7 +65,7 @@
 				<div class="d-flex w-75 gap-3 align-items-center">
 					
 					<input type="text" id="search-location" name="search-location" class="input">
-					<button id="search-location-btn">Find</button>
+					<button id="search-location-btn"><img id="search-icon" src="img/search-icon.png"/></button>
 				</div>
 			</section>
 					</li>
@@ -76,13 +77,10 @@
 	
 		<!-- breaking down each item on the page into sections -->
 		<main class="d-flex-column">
-
 			
 
 
-			<section id="weather-info-container" class="d-flex container-fluid w-100 ">
-
-			</section>
+			<section id="weather-info-container" class="d-flex container-fluid w-100 "></section>
 
 			<section id="map-background" class="w-100 p-5 justify-content-center" >
 				<!-- creating span to be a placeholder for generated city -->

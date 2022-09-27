@@ -27,10 +27,10 @@ $(function(){
      let generateCards = function(
           date, temp, description, humidity, wind, pressure, icon){
           let cardTemplate = `
-            <div class="card m-2 card-main" style="width: 18rem; background-color: #091A1F">
+            <div class="card m-2 card-main" style="width: 18rem; background-color: #091A1F33">
                 <div class="card-body d-flex-column text-center">
-                     <h5 class="card-title text text-center" id="date"style="background-color: #314044">${date}</h5>
-                     <h6 class="card-subtitle mb-2 text-muted text-center mt-3">${parseInt(1.8*(parseInt(temp)-273) + 32)}&#8457;</h6>
+                     <h5 class="card-title text text-center" id="date"style="background-color: #12242933">${date}</h5>
+                     <h6 class="card-subtitle mb-2 text-white text-center mt-3">${parseInt(1.8*(parseInt(temp)-273) + 32)}&#8457;</h6>
                      <img src="http://openweathermap.org/img/w/${icon}.png" alt="">
                      <hr>
                      <p class="card-text text-center data">Description - ${description}</p><hr>
@@ -75,7 +75,7 @@ $(function(){
                mapboxgl.accessToken = MAPBOX_API_KEY;
                let map = new mapboxgl.Map({
                                                container: 'map-container',
-                                               style: 'mapbox://styles/mapbox/navigation-night-v1',
+                                               style: 'mapbox://styles/mapbox/outdoors-v11',
                                                center: [-98.4916, 29.4252]
                                           })
                

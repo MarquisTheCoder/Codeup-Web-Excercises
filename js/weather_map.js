@@ -42,9 +42,6 @@ $(function(){
           WEATHER_INFO_CONTAINER.append(cardTemplate)
             
      }
-    
-    
-   
      
      //generating the latitude loingtitude form the 
      // map box api 
@@ -53,7 +50,8 @@ $(function(){
                     return fetch(`${apiUrl}${longitude},${latitude}.json?access_token=${api_key}`)
                          .then((response) => response.json())
                          .then((responseData) => responseData.features[0].place_name)
-               } 
+               }
+               
      function updateScreen(address, api_key) {
           
           geocodeRestaurant(address, api_key)
@@ -71,6 +69,9 @@ $(function(){
                     `forecast?lat=${latitude}&lon=${longitude}&` +
                     `appid=${WEATHERMAP_API_KEY}`
               
+               
+               //reinitializing the map per
+               //request
               $('#map-container').html('')
                mapboxgl.accessToken = MAPBOX_API_KEY;
                let map = new mapboxgl.Map({
@@ -81,8 +82,11 @@ $(function(){
                
                $.get(apiCallUrl).done(response => {
                     
-                    response.list.filter((_e, index) => index % 8 === 0).forEach((weatherMapObject, index) => {
-                         
+                    //as the object array for the weather data in forecast is an
+                    //array of 40 to get a 5 day forecast I had to filter by each 8th value
+                    //and generate a card for each returned data set
+                    response.list.filter((_e, index) => index % 8 === 0)
+                         .forEach((weatherMapObject, index) => {
                          generateCards(
                               epochDateConversion(weatherMapObject.dt),
                               weatherMapObject.main.temp,
@@ -96,22 +100,26 @@ $(function(){
                          // console.log(weatherMapObject)
                          // console.log(weatherMapObject.weather[0].main)
                     })
+                    
                     map.setCenter(mapCoordinates)
                     map.setZoom(14)
+                    
                     //setting marker
                     let marker = new mapboxgl.Marker({draggable: true})
-                    .setLngLat(mapCoordinates)
-                    .addTo(map)
+                         .setLngLat(mapCoordinates)
+                         .addTo(map)
                     
                    
-                    
+                   //when marker is dragged it gets the place
+                    //value of the coordinates with reverse geo code then
+                    //updates the screen with that place value
                     marker.on('dragend', () => {
                          reverseGeocodeRestaurant(marker.getLngLat().lat, marker.getLngLat().lng, api_key)
                               .then(place =>{ 
                                    $('#weather-info-container').html('')
-                                   updateScreen(place, api_key)})
+                                   updateScreen(place, api_key)
+                              })
                     })
-               
                })
           
           
@@ -133,7 +141,8 @@ $(function(){
           .then((responseData) => responseData.features[0].center);
      }
      
-    //update functions
+    //on search button click updates information and map based
+    // on input in #search-location input container 
      SEARCH_BUTTON.on('click',()=> {
           WEATHER_INFO_CONTAINER.html('')
           updateScreen($('#search-location').val(), MAPBOX_API_KEY)

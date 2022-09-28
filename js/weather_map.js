@@ -67,9 +67,9 @@ $(function(){
                let map = new mapboxgl.Map({
                                                container: 'map-container',
                                                style: 'mapbox://styles/mapbox/dark-v10',
-                                               center: [longitude, latitude],
+                                               center: [longitude, `${parseInt(latitude) - 50}`],
                                                zoom: 10 ,
-                                               pitch: 45,
+                                               pitch: 70,
                                                bearing: -17.6,
                                                antialias: true
                     
@@ -100,7 +100,7 @@ $(function(){
                     
                     map.setCenter(mapCoordinates)
                     map.setZoom(10)
-                    map.addControl(new mapboxgl.NavigationControl());
+                    // map.addControl(new mapboxgl.NavigationControl());
                     //setting marker
                     let marker = new mapboxgl.Marker({draggable: true, color: '#A74D1F'})
                          .setLngLat(mapCoordinates)
@@ -121,6 +121,56 @@ $(function(){
                               updateScreen(place, api_key)
                          })
                     })
+     
+     
+                    map.on('load', () => {
+// Insert the layer beneath any symbol layer.
+                         const layers = map.getStyle().layers;
+                         const labelLayerId = layers.find(
+                              (layer) => layer.type === 'symbol' && layer.layout['text-field']
+                         ).id;
+
+// The 'building' layer in the Mapbox Streets
+// vector tileset contains building height data
+// from OpenStreetMap.
+                         map.addLayer(
+                              {
+                                   'id': 'add-3d-buildings',
+                                   'source': 'composite',
+                                   'source-layer': 'building',
+                                   'filter': ['==', 'extrude', 'true'],
+                                   'type': 'fill-extrusion',
+                                   'minzoom': 15,
+                                   'paint': {
+                                        'fill-extrusion-color': '#aaa',
+
+// Use an 'interpolate' expression to
+// add a smooth transition effect to
+// the buildings as the user zooms in.
+                                        'fill-extrusion-height': [
+                                             'interpolate',
+                                             ['linear'],
+                                             ['zoom'],
+                                             15,
+                                             0,
+                                             15.05,
+                                             ['get', 'height']
+                                        ],
+                                        'fill-extrusion-base': [
+                                             'interpolate',
+                                             ['linear'],
+                                             ['zoom'],
+                                             15,
+                                             0,
+                                             15.05,
+                                             ['get', 'min_height']
+                                        ],
+                                        'fill-extrusion-opacity': 0.6
+                                   }
+                              },
+                              labelLayerId
+                         );
+                    });
                     
                })
           })

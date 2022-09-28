@@ -22,10 +22,19 @@ body{
 }
 
 
-
+#logo{
+    font-family: 'Lato', sans-serif;
+    font-size: larger;
+    color: #C7C7C7;
+}
 nav{
-    background-color: #010101;
+    background-color: #010101aa;
     height: 10vh;
+    width: 100vw;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 nav li{
@@ -70,13 +79,12 @@ button{
 
 #map-container{
     position: absolute;
-    top: 10vh;
+    top: 0;
     left: 0;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     z-index: 0;
     margin: 0;
-    cursor: url("img/cursor.png"), auto;
 }
 
 .weather-info-mask{
@@ -124,5 +132,9 @@ button{
 #current-city{
 
     font-size: 1rem;
-    color: #ffffff77;
+    background-color: black;
+    padding: 10px 20px;
+    color: #98989888;
+    border-radius: 5px;
+    border: solid #ffffff44 1px;
 }

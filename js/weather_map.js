@@ -21,10 +21,10 @@ $(function(){
      
      //generating card to display map data
      let generateCards = function( date, temp, description, humidity, wind, pressure, icon){
-          let cardTemplate = `<div class="card card-main" style=" width: 18rem; background-color: #15181D88; border: solid #010101cc 1px;">
+          let cardTemplate = `<div class="card card-main" style=" width: 18rem; background-color: #15181D88; border: solid #01010122 1px;">
                                 <div class="card-body d-flex-column text-center">
                                      <h5 class="card-title text text-center" id="date"style="background-color: #00000033">${date}</h5>
-                                     <h6 class="card-subtitle mb-2 text-white text-center mt-3">${parseInt(1.8*(parseInt(temp)-273) + 32)}&#8457;</h6>
+                                     <h6 class="card-subtitle mb-2 text-center mt-3">${parseInt(1.8*(parseInt(temp)-273) + 32)}&#8457;</h6>
                                      <img src="http://openweathermap.org/img/w/${icon}.png" alt="">
                                      <hr>
                                      <p class="card-text text-center data">Description - ${description}</p><hr>
@@ -46,16 +46,16 @@ $(function(){
      }
                
      function updateScreen(address, api_key) {
-          
           geocodeRestaurant(address, api_key).then(mapCoordinates => {
-               
                let longitude = mapCoordinates[0]
                let latitude = mapCoordinates[1]
                
-               
+               //reverse geocoding current position to display city
                reverseGeocodeRestaurant(latitude, longitude, api_key)
                     .then(placeName => $('#current-city').html(`${placeName.split(',')[1]}`))
-               
+              
+              
+              //api call to weather map for longitude latitude  
                let apiCallUrl = 'https://api.openweathermap.org/data/2.5/' +
                     `forecast?lat=${latitude}&lon=${longitude}&` +
                     `appid=${WEATHERMAP_API_KEY}`
@@ -68,11 +68,20 @@ $(function(){
                                                container: 'map-container',
                                                style: 'mapbox://styles/mapbox/dark-v10',
                                                center: [longitude, latitude],
-                                               zoom: 10  
+                                               zoom: 10 ,
+                                               pitch: 45,
+                                               bearing: -17.6,
+                                               antialias: true
+                    
                                                   
                                           })
+               
+               
+               
+               //reseting card container
                CARD_HOLDER.html('') 
                $.get(apiCallUrl).done(response => {
+                    
                     //as the object array for the weather data in forecast is an
                     //array of 40 to get a 5 day forecast I had to filter by each 8th value
                     //and generate a card for each returned data set
@@ -87,9 +96,6 @@ $(function(){
                               weatherMapObject.main.pressure,
                               weatherMapObject.weather[0].icon,
                          )
-                    
-                         // console.log(weatherMapObject)
-                         // console.log(weatherMapObject.weather[0].main)
                     })
                     
                     map.setCenter(mapCoordinates)
@@ -100,7 +106,6 @@ $(function(){
                          .setLngLat(mapCoordinates)
                          .addTo(map)
                     
-                   
                    //when marker is dragged it gets the place
                     //value of the coordinates with reverse geo code then
                     //updates the screen with that place value
@@ -116,21 +121,18 @@ $(function(){
                               updateScreen(place, api_key)
                          })
                     })
-     
+                    
                })
-          
-          
           })
      }
-    
+     
      //converting the given unix time in miliseconds into
      //a human readable format
      function epochDateConversion(milliseconds){
           let date = new Date(milliseconds * 1000)
           // return (`${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`)
           return `${date}`.split(' ')[0]
-     } 
-     
+     }
      //getting long/lat coordinaties for a specific address
      function geocodeRestaurant(address, accessToken){
           let apiUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
@@ -138,7 +140,6 @@ $(function(){
           .then((response) => response.json())
           .then((responseData) => responseData.features[0].center);
      }
-     
     //on search button click updates information and map based
     // on input in #search-location input container 
      SEARCH_BUTTON.on('click',()=> {
@@ -147,6 +148,11 @@ $(function(){
           //deleting input text after search just a pet peeve
           $('#search-location').val('')
      })
-     
-     
+     $('#search-location').on('keydown', (event) =>{
+          if(event.key == 'Enter'){
+               updateScreen($('#search-location').val(), MAPBOX_API_KEY)
+               //deleting input text after search just a pet peeve
+               $('#search-location').val('') 
+          }
+     })
 })

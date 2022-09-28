@@ -53,7 +53,7 @@ $(function(){
                }
                
      function updateScreen(address, api_key) {
-          
+           
           geocodeRestaurant(address, api_key)
           .then(mapCoordinates => {
                
@@ -146,6 +146,9 @@ $(function(){
      SEARCH_BUTTON.on('click',()=> {
           WEATHER_INFO_CONTAINER.html('')
           updateScreen($('#search-location').val(), MAPBOX_API_KEY)
+          
+          //deleting input text after search just a pet peeve
+          $('#search-location').val('')
      })
      
      

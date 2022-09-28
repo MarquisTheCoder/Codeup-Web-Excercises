@@ -1,24 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
 body{
     /*background: url("https://cutewallpaper.org/25/anime-rain-wallpaper-gif/pin-on-moody-rain.gif");*/
     /*background: linear-gradient(#091C21, #0C262D, #143E4A, #1B5261);*/
-    background-color: #93B4BE;
+    position: relative;
+    background-color: #010101;
     background-size: cover;
     font-family: 'Lato', sans-serif;
+    height: 100vh;
 }
+
+
+
 nav{
-    background-color: #091A1E88;
-    margin-bottom: 2.5em;
-    height: 12vh;
+    background-color: #010101;
+    height: 10vh;
 }
 
-
-#date{
-    color: #D2EDF4;
-}
 nav li{
     list-style-type: none;
+}
+
+#main-icon{
+    height: 40px;
 }
 input{
     background-color: #94CFDF33;
@@ -28,30 +38,7 @@ input{
     padding-left: 10px;
     width: 35vw;
 }
-button{
-    font-size: smaller;
-}
 
-#map-container{
-    width: 80vw;
-    min-width: 80vw;
-    height: 60vh;
-    min-height: 60vh;
-    margin: 40px;
-    border-radius: 15px;
-    border: solid #00000033 2px;
-}
-
-.card-title{
-    border-radius: 5px;
-}
-.data{
-    background-color: #31404405;
-    border-radius: 5px;
-}
-/*#map-background{*/
-/*    background-color: #0A141699;*/
-/*}*/
 #search-location-btn{
     background-color: #00000000;
     padding: 0 10px 0 10px;
@@ -59,21 +46,70 @@ button{
     border: none;
     border-radius: 5px;
 }
+
+#search-bar-container{
+    width: 30vw;
+
+}
 #search-icon{
     height: 25px;
     width: 27px;
 }
 
+button{
+    font-size: smaller;
+}
+
+#map-container{
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    z-index: 0;
+    margin: 0;
+
+}
+
+.weather-info-mask{
+    position: absolute;
+    top: calc(10vh + 10px);
+    left: 0;
+    bottom: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card-holder{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+#weather-info-container{
+    background-color: black;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+
+}
+.card{
+    z-index: 5;
+}
+.card-title{
+    border-radius: 5px;
+}
+.data{
+    background-color: #31404405;
+    border-radius: 5px;
+}
+
+#date{
+    color: #D2EDF4;
+}
+
 #current-city{
 
-    font-size: .5rem;
+    font-size: 1rem;
     color: #ffffff77;
-}
-#main-icon{
-    height: 40px;
-}
-
-#search-bar-container{
-    width: 30vw;
-
 }

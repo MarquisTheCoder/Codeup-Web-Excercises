@@ -26,7 +26,7 @@ input{
     border: none;
     border-radius: 5px;
     padding-left: 10px;
-    width: 50vw;
+    width: 35vw;
 }
 button{
     font-size: smaller;
@@ -63,14 +63,17 @@ button{
     height: 25px;
     width: 27px;
 }
-#current-city, #current-city-li{
-    font-size: 2rem;
-}
+
 #current-city{
-    background-color: #637E87;
-    border-radius: 15px;
+
+    font-size: .5rem;
     color: #ffffff77;
 }
 #main-icon{
     height: 40px;
+}
+
+#search-bar-container{
+    width: 30vw;
+
 }

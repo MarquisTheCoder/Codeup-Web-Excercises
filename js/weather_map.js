@@ -48,7 +48,12 @@ $(function(){
      
      //generating the latitude loingtitude form the 
      // map box api 
-     
+     function reverseGeocodeRestaurant(latitude, longitude, api_key){
+                    let apiUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
+                    return fetch(`${apiUrl}${longitude},${latitude}.json?access_token=${api_key}`)
+                         .then((response) => response.json())
+                         .then((responseData) => responseData.features[0].place_name)
+               } 
      function updateScreen(address, api_key) {
           
           geocodeRestaurant(address, api_key)
@@ -58,13 +63,8 @@ $(function(){
                let longitude = mapCoordinates[0]
                let latitude = mapCoordinates[1]
                
-               function reverseGeocodeRestaurant(){
-                    let apiUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
-                    return fetch(`${apiUrl}${longitude},${latitude}.json?access_token=${api_key}`)
-                         .then((response) => response.json())
-                         .then((responseData) => responseData.features[0].place_name)
-               } 
-               reverseGeocodeRestaurant()
+               
+               reverseGeocodeRestaurant(latitude, longitude, api_key)
                     .then(placeName => $('#current-city').html(`${placeName.split(',')[1]}`))
                
                let apiCallUrl = 'https://api.openweathermap.org/data/2.5/' +
@@ -99,9 +99,18 @@ $(function(){
                     map.setCenter(mapCoordinates)
                     map.setZoom(14)
                     //setting marker
-                    let marker = new mapboxgl.Marker()
+                    let marker = new mapboxgl.Marker({draggable: true})
                     .setLngLat(mapCoordinates)
                     .addTo(map)
+                    
+                   
+                    
+                    marker.on('dragend', () => {
+                         reverseGeocodeRestaurant(marker.getLngLat().lat, marker.getLngLat().lng, api_key)
+                              .then(place =>{ 
+                                   $('#weather-info-container').html('')
+                                   updateScreen(place, api_key)})
+                    })
                
                })
           

@@ -81,7 +81,6 @@ $(function(){
                //reseting card container
                CARD_HOLDER.html('') 
                $.get(apiCallUrl).done(response => {
-                    
                     //as the object array for the weather data in forecast is an
                     //array of 40 to get a 5 day forecast I had to filter by each 8th value
                     //and generate a card for each returned data set

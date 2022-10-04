@@ -83,7 +83,7 @@ const users = [
      * TODO
      *  Use .reduce to get the longest email from the list of users.
      * */
-      
+     
       let longestEmail = users.reduce((lastEmail, employee) => {
           if (employee.email.length > lastEmail.length)
                return employee.email;

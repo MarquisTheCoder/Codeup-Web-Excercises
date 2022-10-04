@@ -8,3 +8,19 @@ let commitPromise = (username = 'MarquisTheCoder') => {
 }
 commitPromise().then(creationDate => console.log(creationDate.created_at))
 
+//vanilla javascript method of promise request is the fetch api
+
+
+// const aPromise = new Promise((resolve, reject) => {
+//      setTimeout(() => {
+//           if(Math.random() > 0.5){
+//                resolve("Number is above the threshhold");
+//           }else{
+//                reject("Number to small")
+//           }
+//      }, 1500);
+// });
+//
+// aPromise
+//      .then(response => console.log(response))
+//      .catch(error => console.log(error))

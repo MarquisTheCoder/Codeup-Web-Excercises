@@ -1,29 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!--
-    Creator: Deshawn Marquis, Williams
-    Github Profile: https://github.com/MarquisTheCoder
-    Date Created: 10/3/22
-    Time Created: 9:06 AM
-    File Name: warmups.html
-		-->
-	<head>
-		
-		<title>codeup-web-exercises</title>
-		
-		<meta charset="UTF-8">
-		<meta name="viewport" content="initial-scale=1, width=device-width">
-
-	</head>
-	<body>
-		<h1>Warm ups</h1>
-		
-		<script>
-			Array.from(Array(10).keys()).forEach(_num => {
-				document.querySelector('body').innerHTML += `${_num} <br>`
-			})
-		</script>
-	</body
-	>
+<meta charset="UTF-8">
+<title>Warmups</title>
+<link rel="stylesheet" href="css/dark-mode.css">
+<style>
+	h2  {
+		padding: 20px;
+		border: 1px solid white;
+	}
+	
+	.hotpink {
+		color: hotpink;
+	}
+</style>
+</head>
+<body>
+<h1>Warmups</h1>
+<button>Change Heading</button>
+<br>
+<br>
+<div id="loremParagraphs">
+	<h2>Lorem Generator</h2>
+<!--	<button id="lorem&#45;&#45;button-hotPinkit">Hot Pink It</button>-->
+	<br>
+	<br>
+	<button id="lorem--button-pinkyBlinky">Pink Blinky</button>
+</div>
+<br>
+<label for="source">Input for paragraph:</label>
+<input type="text" id="source">
+<p id="output"></p>
+<script src="js/jquery-3.6.1.min.js"></script>
+<script>
+	$(() => {
+		let state = 0;
+		$("#lorem--button-pinkyBlinky").on("click", () => {
+			setInterval(() => {
+				if(state = 0){
+					$("h2").css("color", "pink");
+					state = 1;
+				}else{
+					$("h2").css("color", "black");
+				}
+			}, 3000)
+		})
+	})
+</script>
+</body>
 </html>

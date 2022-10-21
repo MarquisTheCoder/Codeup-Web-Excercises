@@ -1,16 +1,16 @@
 <meta charset="UTF-8">
 <title>Warmups</title>
 <link rel="stylesheet" href="css/dark-mode.css">
-<style>
-	h2  {
-		padding: 20px;
-		border: 1px solid white;
-	}
-	
-	.hotpink {
-		color: hotpink;
-	}
-</style>
+<!--<style>-->
+<!--	h2  {-->
+<!--		padding: 20px;-->
+<!--		border: 1px solid white;-->
+<!--	}-->
+<!--	-->
+<!--	.hotpink {-->
+<!--		color: hotpink;-->
+<!--	}-->
+<!--</style>-->
 </head>
 <body>
 <h1>Warmups</h1>
@@ -30,18 +30,22 @@
 <p id="output"></p>
 <script src="js/jquery-3.6.1.min.js"></script>
 <script>
+	document.body.style.backgroundColor = "blue";
 	$(() => {
+		
 		let state = 0;
-		$("#lorem--button-pinkyBlinky").on("click", () => {
-			setInterval(() => {
-				if(state = 0){
-					$("h2").css("color", "pink");
-					state = 1;
-				}else{
-					$("h2").css("color", "black");
-				}
-			}, 3000)
-		})
+
+		
+		// $("#lorem--button-pinkyBlinky").on("click", () => {
+		// 	setInterval(() => {
+		// 		if(state = 0){
+		// 			$("h2").css("color", "pink");
+		// 			state = 1;
+		// 		}else{
+		// 			$("h2").css("color", "black");
+		// 		}
+		// 	}, 3000)
+		// })
 	})
 </script>
 </body>

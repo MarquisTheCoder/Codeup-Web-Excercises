@@ -1,0 +1,35 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/boxes.jpg");
+    background-size: cover;
+}
+#search{
+
+    width: 60em;
+    height: 2.2em;
+    border-radius: 8px;
+    color: white;
+    border-color: #A3A3BD33;
+    border-width: 1px;
+    background-color: #111119dd;
+    padding-left: 8em;
+    padding-right: 8em;
+}
+
+.main-section--search{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: larger;
+}
